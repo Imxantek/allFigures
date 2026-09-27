@@ -1,5 +1,6 @@
 import enum
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import UniqueConstraint
 
 db=SQLAlchemy()
 
@@ -21,6 +22,7 @@ class StatusEnum(enum.Enum):
     AVAILABLE="available"
     PREORDER="preorder"
     UNAVAILABLE="unavailable"
+    ARCHIVAL="archival"
 
 class Offer(db.Model):
     __tablename__="offer"
@@ -46,3 +48,7 @@ class Character(db.Model):
     name=db.Column(db.String(100),nullable=False)
 
     figures=db.relationship('Figure',backref='character',lazy='dynamic')
+
+    __table_args__ = (
+        UniqueConstraint('name', 'S_ID', name='unique_character_per_series'),
+    )
