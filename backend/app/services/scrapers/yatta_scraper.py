@@ -25,9 +25,13 @@ from app.models import StatusEnum, StoreEnum, db, Character, Series, Offer, Figu
 
 KNOWN_CHARACTERS_LIST: list[str]=[]
 KNOWN_CHARACTERS_DICT: dict[str, set[str]] = {}
-KW_BLACKLIST = ["model kit accessory", "throne", "duvet", "bowl", "adventure island", "banknote", "coin", "map", "mask", "surprise piapro characters", "medalion", "morpher", "ingot", "blanket",
-                "bath duck", "holotape", "keycard", "outfit", "medallion", "-pack", "desk mat", "figure egg", "movie ticket", "upgrade ticket", "doll parts for nendoroid"]
-URL_BLACKLIST =[
+KW_BLACKLIST = {"model kit accessory", "throne", "duvet", "bowl", "adventure island", "shower curtain", "card", "lotr replica", "snk robot metal",
+                "banknote", "coin", "map", "mask", "surprise piapro characters", "poster", "harry potter role play", "notebook", "foam sword",
+                "medalion", "morpher", "ingot", "blanket", "megami device m.s.g.", "ceramic mug", "doom the dark ages replica",
+                "bath duck", "purse", "holotape", "keycard", "outfit set", "medallion", "-pack", "doom 2 replica", "nendoroid more", "support item",
+                "desk mat", "figure egg", "movie ticket", "upgrade ticket", "parts for nendoroid", "dungeons & dragons foam",
+                "cd-rom", "board game", "towel", "aquabeads", "flying bulls", "click system", "harry potter replica", "accessory set"}
+URL_BLACKLIST ={
                 # random bs
                 "https://yatta.pl/Preorder_Lord_of_the_Rings_LARP_Stunt_Prop_Replica_1_1_Sting,321973,p",
                 "https://yatta.pl/Lord_of_the_Rings_Replica_1_1_Key_to_Bag_End_15_cm,297840,p",
@@ -71,7 +75,102 @@ URL_BLACKLIST =[
                 "https://yatta.pl/Resident_Evil_4_Replica_1_1_Metal_Exclusive_Upgrade_Ticket,270753,p",
                 "https://yatta.pl/Nendoroid_Doll_Parts_for_Nendoroid_Doll_Figures_Mermaid_Set,266379,p",
                 "https://yatta.pl/Star_Wars_Episode_I_Model_Kit_Gift_Set_1_120_Darth_Mauls_Sit,258426,p",
-                "",
+                "https://yatta.pl/Harry_Potter_Hermine_s_Time_Turner,32495,p",
+                "https://yatta.pl/Harry_Potter_Sirius_Black_s_Wand,32494,p",
+                "https://yatta.pl/Harry_Potter_Sirius_Black_s_Wand,32494,p",
+                "https://yatta.pl/Harry_Potter_Collector_Gift_Box_Harry_Potter_s_Journey_to_Ho,216045,p",
+                "https://yatta.pl/Harry_Potter_Kids_Wizard_Robe_Slytherin,141435,p",
+                "https://yatta.pl/Harry_Potter_Plush_Figure_with_Sound_Sorting_Hat_22_cm_Engli,214213,p",
+                "https://yatta.pl/Harry_Potter_Prop_Replica_1_1_Golden_Egg_23_cm,78731,p",
+                "https://yatta.pl/Harry_Potter_Replica_1_1_Basilisk_Fang_and_Tom_Riddle_Diary,77835,p",
+                "https://yatta.pl/Harry_Potter_Replica_1_1_Deluminator,37803,p",
+                "https://yatta.pl/Harry_Potter_Replica_1_1_Firebolt_Broom,42133,p",
+                "https://yatta.pl/Harry_Potter_Replica_1_1_Hermione_s_Bag,176020,p",
+                "https://yatta.pl/Harry_Potter_Replica_Bellatrix_Lestrange_s_Wand_35_cm,42134,p",
+                "https://yatta.pl/Harry_Potter_Replica_Sorcerer_s_Stone,32479,p",
+                "https://yatta.pl/Harry_Potter_Replica_The_Hufflepuff_Cup,44557,p",
+                "https://yatta.pl/Harry_Potter_Role_Play_Wand_Harry_Potter_30_cm,289758,p",
+                "https://yatta.pl/Harry_Potter_Role_Play_Wand_Lord_Voldemort_30_cm,289760,p",
+                "https://yatta.pl/Harry_Potter_Role_Play_Wand_The_Elder_Wand_30_cm,289761,p",
+                "https://yatta.pl/Harry_Potter_Ten_Character_Wand_Display,32466,p",
+                "https://yatta.pl/Harry_Potter_twin_pack_Role_Play_Wands_Harry_Potter_Ginny_We,289756,p",
+                "https://yatta.pl/Harry_Potter_twin_pack_Role_Play_Wands_The_Elder_Lord_Voldem,289766,p",
+                "https://yatta.pl/Harry_Potter_Wand_Collection_Weasley_Twins,39450,p",
+                "https://yatta.pl/Harry_Potter_Wand_Replica_Hermione_38_cm,181315,p",
+                "https://yatta.pl/Harry_Potter_Wand_Replica_in_Ollivanders_Box_Luna_Lovegood_3,256873,p",
+                "https://yatta.pl/Preorder_Harry_Potter_Celebration_Wand_Harry_Potter_25th_Ann,307317,p",
+                "https://yatta.pl/Preorder_Harry_Potter_Tiny_Adventures_Book_Nook_Mini_Diorama,314643,p",
+                "https://yatta.pl/Preorder_Nintendo_Mario_Kart_Carrera_First_Race_Track_Set_Ma,314681,p",
+                "https://yatta.pl/Preorder_World_of_Nintendo_Super_Mario_Playset_Bowser_Battle,263560,p",
+                "https://yatta.pl/Star_Wars_Episode_IV_Replica_1_1_Black_Chrome_Darth_Vader_He,278543,p",
+                "https://yatta.pl/Harry_Potter_Hermione_Granger_s_Wand,32498,p",
+                "https://yatta.pl/Destiny_Replica_Plaque_Ace_of_Spades_30_cm,289315,p",
+                "https://yatta.pl/Preorder_Aquabeads_Craft_Studio_Starter_Set,313955,p",
+                "https://yatta.pl/Preorder_Red_Bull_Racing_Click_System_Model_Kit_RB21,314661,p",
+                "https://yatta.pl/Preorder_McLaren_Click_System_Kit_MCL39,314662,p",
+                "https://yatta.pl/Preorder_McLaren_Click_System_Kit_MCL39,314662,p",
+                "https://yatta.pl/Resident_Evil_4_Replica_1_1_Insignia_Key,270756,p",
+                "https://yatta.pl/Resident_Evil_4_Replica_1_1_Wayshrine_Key,270757,p",
+                "https://yatta.pl/Harry_Potter_Replica_Crystal_Goblet,35783,p",
+                "https://yatta.pl/Harry_Potter_Voldemort_s_Wand,32492,p",
+                "https://yatta.pl/Harry_Potter_Replica_1_1_The_Horcrux_Locket,40430,p",
+                "https://yatta.pl/Preorder_Monster_Jam_Revell_Build_Play_Kit_Monster_Jam_Grave,314660,p",
+                "https://yatta.pl/Preorder_Monster_Jam_Revell_Build_Play_Kit_Monster_Jam_Max_D,314659,p",
+                "https://yatta.pl/Preorder_Megami_Device_M_S_G_Plastic_Model_Kit_1_1_Desire_Ma,322099,p",
+                "https://yatta.pl/Preorder_Heroes_of_Goo_Jit_Zu_Meteor_Madness_Stretch_Figures,283810,p",
+                "https://yatta.pl/Preorder_Warhammer_40_000_Captain_MkX_Helmet_Ultramarines_30,308960,p",
+                "https://yatta.pl/Attack_on_Titan_Ceramic_Mug_Levi,286675,p",
+                "https://yatta.pl/The_Elder_Scrolls_Skyrim_Replica_Dragonborn_Helmet_Limited_E,283007,p",
+                "https://yatta.pl/Preorder_One_Piece_Shot_Glass_Set_Barrel_8_cm,322710,p",
+                "https://yatta.pl/Preorder_Fallout_Helmet_X_01_10_cm,313579,p",
+                "https://yatta.pl/Preorder_Takahiro_Kagami_PVC_Artist_Support_Item_Hand_1_1_Ha,256878,p",
+                "https://yatta.pl/Preorder_Borderlands_Replica_Gold_Key,296847,p",
+                "https://yatta.pl/Preorder_Lilo_Stitch_Glass_Tumbler_with_Straws_Stitch_485_ml,290777,p",
+                "https://yatta.pl/NieR_Automata_Ver1_1a_Notebook,305784,p",
+                "https://yatta.pl/The_Hobbit_An_Unexpected_Journey_Statue_13_Apple_Orchard_20,167813,p",
+                "https://yatta.pl/Mot_rhead_Shower_Curtain_Warpig_Logo,145956,p",
+                "https://yatta.pl/Kit_Rae_Swords_of_the_Ancients_Replica_Savathos_Mithrodin_Wa,318818,p",
+                "https://yatta.pl/Preorder_One_Piece_Deluxe_Model_Kit_Collector_Ship_Going_Mer,312618,p",
+                "https://yatta.pl/Solar_Spinner_Revolving_Stage_for_Action_Figures,77124,p",
+                "https://yatta.pl/Preorder_Fast_Furious_Model_Kit_Brian_s_1999_Nissan_Skyline,314663,p",
+                "https://yatta.pl/Preorder_Care_Bears_3D_Sticker_Maker_Refills,317884,p",
+                "https://yatta.pl/Preorder_Court_of_the_Dead_Interactive_Light_Up_Sign_and_App,189894,p",
+                "https://yatta.pl/Texas_Chainsaw_Massacre_Figure_Chainsaw_with_Sound_76_cm,243470,p",
+                "https://yatta.pl/James_Bond_Model_Kit_1_24_Aston_Martin_DB5_21_cm,287917,p",
+                "https://yatta.pl/Legend_of_Zelda_Skyward_Sword_Plastic_Replica_Link_s_Hylian,71937,p",
+                "https://yatta.pl/Preorder_Bluey_Playset_Food_Truck,312605,p",
+                "https://yatta.pl/Preorder_Bluey_Playset_Mini_Heelers_Home,312599,p",
+                "https://yatta.pl/Preorder_Bluey_Playset_Tree,312598,p",
+                "https://yatta.pl/Preorder_Avatar_The_Last_Airbender_Replica_Aang_s_Glider,308313,p",
+                "https://yatta.pl/Preorder_Avatar_The_Last_Airbender_Replica_Waterbending_Scro,308312,p",
+                "https://yatta.pl/Preorder_Book_Nook_The_Secret_Rhythm_23_x_11_cm,306985,p",
+                "https://yatta.pl/Knight_Rider_Gift_Box_F_L_A_G_Agent_Kit,215617,p",
+                "https://yatta.pl/Biker_Mice_From_Mars_Vehicle_Throttle_s_Martian_Monster_Bike,239138,p",
+                "https://yatta.pl/Biker_Mice_From_Mars_Action_Figure_Throttle_18_cm,235656,p",
+                "https://yatta.pl/Preorder_Bluey_Figure_Pack_Heeler_Family_Road_Trip,312601,p",
+                "https://yatta.pl/Wonder_Women_1_1_God_Killer_Elite_Edition_79_cm,227257,p",
+                "https://yatta.pl/Transformers_Replica_Matrix_of_Leadership_Metal_Limited_Edit,283010,p",
+                "https://yatta.pl/LOTR_Replica_1_1_Sword_of_King_Theoden_Herugrim_92_cm,226418,p",
+                "https://yatta.pl/LOTR_Replica_1_1_Aeglos_Spear_of_Gil_galad_259_cm,287891,p",
+                "https://yatta.pl/Preorder_Alien_Romulus_Model_Life_Size_Replica_Pulse_Rifle_H,310612,p",
+                "https://yatta.pl/Minecraft_Mega_Squishme_Anti_Stress_Figure_Series_2_Tuxedo_1,260772,p",
+                "https://yatta.pl/Iron_Maiden_Model_Kit_1_144_Boeing_747_400_Ed_Force_One_49_c,287882,p",
+                "https://yatta.pl/Dead_Space_Replica_Isaac_Helmet_Limited_Edition_23_cm,280346,p",
+                "https://yatta.pl/Legend_of_Zelda_Plush_Figure_Hylian_Shield_40_cm,162531,p",
+                "https://yatta.pl/Preorder_Five_Nights_at_Freddy_s_Replica_Security_Badge_Anti,303810,p",
+                "https://yatta.pl/Warhammer_Foam_sword_Armoury_Vanguard_Imperial_Arming_Sword,287394,p",
+                "https://yatta.pl/Warhammer_Foam_sword_Armoury_Stalwart_Imperial_Arming_Sword,287395,p",
+                "https://yatta.pl/Warhammer_Foam_sword_Armoury_Reikland_Imperial_Arming_Sword,287393,p",
+                "https://yatta.pl/Warhammer_Foam_sword_Armoury_Imperial_Flamberge_150_cm,309298,p",
+                "https://yatta.pl/Preorder_Warhammer_Foam_war_hammer_Armoury_Ghal_Maraz_125_cm,301287,p",
+                "https://yatta.pl/Preorder_Fast_Furious_Playset_Wrecking_Ball_Rampage_37_cm,316052,p",
+                "https://yatta.pl/Preorder_Fast_Furious_Playset_Nitro_Blast_11_cm,316103,p",
+                "https://yatta.pl/Star_Wars_The_Mandalorian_Model_Kit_1_72_The_Razor_Crest_34,198229,p",
+                "https://yatta.pl/Star_Wars_Model_Kit_1_72_Millennium_Falcon_38_cm,184640,p",
+                "https://yatta.pl/Star_Wars_Episode_VII_Model_Kit_1_52_Snowspeeder_10_cm,77972,p",
+                "https://yatta.pl/Arknights_Nendoroid_More_Amiya_Extension_Set,247690,p",
+                "https://yatta.pl/Preorder_The_Lord_of_the_Rings_Environment_Hobbit_Hole_Bag_E,322871,p",
+                # "",
 
 
                 # more than one:
@@ -103,6 +202,31 @@ URL_BLACKLIST =[
                 "https://yatta.pl/Preorder_Mighty_Morphin_Power_Rangers_Premium_Masterline_Set,318947,p",
                 "https://yatta.pl/Preorder_Mighty_Morphin_Power_Rangers_Premium_Masterline_Sta,318949,p",
                 "https://yatta.pl/Mystery_Mini_Blind_Box_Marvel_Thor_Ragnarok_PDQ_CDU_12,151602,p",
+                "https://yatta.pl/Preorder_Silpheed_Plastic_Model_Kit_1_100_SA_77_Lancer_type,321874,p",
+                "https://yatta.pl/Preorder_Halo_Campaign_Evolved_Ultimate_Premium_Masterline_S,322790,p",
+                "https://yatta.pl/Preorder_Halo_Campaign_Evolved_Ultimate_Premium_Masterline_S,322791,p",
+                "https://yatta.pl/Preorder_Halo_Vinyl_Figures_The_Master_Chief_Cortana_Monitor,289544,p",
+                "https://yatta.pl/Preorder_Dragon_Ball_Z_Yuracolle_Series_PVC_Figures_Set_Coll,322272,p",
+                "https://yatta.pl/Preorder_Reborn_Resin_Statue_1_6_Tsuna_Reborn_Natsu_37_cm,317229,p",
+                "https://yatta.pl/The_Little_Prince_Figure_Little_Prince_Fox_on_the_Plane_7_cm,234055,p",
+                "https://yatta.pl/Preorder_Rocky_III_Diorama_1_4_Statue_Rocky_Balboa_Apollo_Cr,286012,p",
+                "https://yatta.pl/The_Smurfs_Resin_Statue_Smurfs_Column_Polychrome_Edition_50,255658,p",
+                "https://yatta.pl/Preorder_Gurren_Lagann_Ultimate_Premium_Masterline_Series_St,260650,p",
+                "https://yatta.pl/Preorder_Call_of_Duty_Vinyl_Figures_Ghost_Soap_Monitor_Buddi,307434,p",
+                "https://yatta.pl/Preorder_Nadia_The_Secret_of_Blue_Water_Concept_Masterline_S,283273,p",
+                "https://yatta.pl/Preorder_Horizon_Forbidden_West_Ultimate_Diorama_Masterline,302771,p",
+                "https://yatta.pl/Preorder_Horizon_Forbidden_West_Ultimate_Diorama_Masterline,302772,p",
+                "https://yatta.pl/Preorder_Breaking_Bad_Vinyl_Figure_Walt_Jesse_11_cm,234278,p",
+                "https://yatta.pl/Preorder_Fullmetal_Alchemist_Concept_Masterline_Statue_1_6_R,262530,p",
+                "https://yatta.pl/Preorder_Invincible_Vinyl_Figure_Invincible_vs_Conquest_12_c,283709,p",
+                "https://yatta.pl/Preorder_Kuroko_s_Basket_Resin_Statue_1_6_Tetsuya_Kuroko_Tai,317231,p",
+                "https://yatta.pl/Preorder_Attack_on_Titan_Ultimate_Premium_Masterline_Series,266514,p",
+                "https://yatta.pl/Preorder_Avatar_The_Last_Airbender_Plush_Figure_Aang_and_Mom,234704,p",
+                "https://yatta.pl/Preorder_Spirou_Fantasio_Resin_Statue_1_10_Spirou_Marsupilam,317232,p",
+                "https://yatta.pl/Preorder_Seven_Deadly_Sins_Concept_Masterline_Series_Statue,242205,p",
+                "https://yatta.pl/Preorder_Seven_Deadly_Sins_Concept_Masterline_Series_Statue,242206,p",
+                "https://yatta.pl/Star_Wars_The_Mandalorian_Grogu_Vintage_Collection_Action_Fi,313872,p",
+                "https://yatta.pl/Preorder_Lord_of_the_Rings_Mini_Figures_The_Hobbits_of_the_S,313210,p",
                 # "",
 
 
@@ -116,18 +240,29 @@ URL_BLACKLIST =[
                 # ????????
                 "https://yatta.pl/Preorder_Spice_and_Wolf_Merchant_Meets_the_Wise_Wolf_PVC_Sta,289968,p?over18=1",
                 "ttps://yatta.pl/Preorder_Spice_and_Wolf_Merchant_Meets_the_Wise_Wolf_PVC_Sta,289968,p"
-                ]
-KW_SKIP=["Plastic Model Kit", "Godzilla vs. Kong", "Godzilla x Kong", "Shiny Colors", "Kimetsu No Yaiba", "The Mandalorian & Grogu", "Star Wars: Maul - Shadow Lord", "Star Wars: Ahsoka", "Jurassic World", "Fine", "Bust",  "L Size", "M Size", "S Size", "Nendoroid", "Cafe", "LycoReco", "PVC", "Premium", "Masterline", "ED", "Ver", "Figure", "Action", "Complete", "Edition", "Bunny", "Statue", "Plush", "Vinyl", "Revenge of the Sith", "Movie",
-             "Village", "Fantastic Beasts", "The Horus Heresy", "Series", "Soft", "Real", "Scale", "Original", "Character", "FNex", "Nex", "Pop", "Up", "Parade", "Figure", "Illustration", "Deluxe", "Normal", "Rebels",
-             "Uodenim", "Chihiro", "Magician", "Elf", "Villager", "Antenna", "Shop", "Limited", "Exclusive", "Bonus", "Item", "Scale", "Dunny", "Art", "Collectible", "Menu", "Item", "Design", "Designer", "Anniversary",
-             "Set", "Replica", "Life-Size", "Tenitol", "Concept", "Silicone", "Shippuden", "Light Armor", "Version", "A", "Cyber Pets", "Antenna Shop Limited Edition",
-             "Regular", "Illustrated", "Kimetsu", "Yaiba", "Noodle Stopper", "Avengers", "Doomsday", "BDS", "Rivals", "Gamerverse", "Format", "Ultra II The Final Challengers",
-             "TOHO Daikaiju Favorite Sculptors Line", "TOHO", "POP", "Cyberpunk Edgerunners", "Five Nights", "FNAF", "Six Collection Chibi", "Figures", "ReAction", "III", "Model Kit", "Episode",
-            "Doll", "Chinese-Style", "The Shiny Colors", "Masterpiece", "Movie", "Mini", "My Little Pony", "Bishoujo", "BLOOM", "Brickroid", "Figma", "Crane Kick", "The Fandom", "Fandom", "Gwaihir",
-            "Classified Nemesis Immortal", "Karasuno", "Surprise", "Brotherhood", "Clothed", "Frieren Beyond Journey's", "Star Wars", "The Clone Wars", "Arc Trooper", "The Mandalorian", "The Phantom Menace",
+}
+KW_SKIP={"Plastic Model Kit", "Little Witch Academia", "Avatar The Last Airbender", "The Rising of the Shield Hero", "Rock Iconz", "The Last of Us", "Rainbow Six Siege",
+         "The Transformers: The Movie Studio Series", "Re Zero Starting Life in Another World", "Starting Life in Another World", "Mystery Minis",
+         "Teenage Mutant Ninja Turtles Ninja", "Magical Creatures", "Star Trek Generations", "Legacy", "Dragon Ball Z", "Gears of War Reloaded",
+         "Grand Order", "Stay Puft", "Jason and the Argonauts", "Print Portrait", "Ganbare Douki chan", "Bobble Head", "NIJISANJI EN", "Sunshine in the Mirror",
+         "Real Elite Masterline", "The Transformers The Movie Studio Series", "Aoni Production", "Rise of the Beasts", "Goddess of Victory Nikke", "Star Wars Legendary",
+         "Generation One", "Godzilla vs. Kong", "Godzilla x Kong", "Shiny Colors", "Kimetsu No Yaiba", "The Mandalorian & Grogu", "One Punch Man",
+         "Star Wars: Maul - Shadow Lord", "Star Wars: Ahsoka", "Jurassic World", "Fine", "Bust",  "L Size", "M Size", "S Size", "II", "Foam", "GigantiX",
+         "Nendoroid", "Cafe", "LycoReco", "PVC", "Premium", "Masterline", "ED", "Ver", "Figure", "Action", "Complete", "Edition", "Skyrim", "StarCraft"
+         "Bunny", "Statue", "Plush", "Vinyl", "Revenge of the Sith", "Movie", "Prop", "Taito Kuji", "Taito", "Mario Kart", "Huggy Good Smile", "Justice League"
+         "Village", "Fantastic Beasts", "The Horus Heresy", "Series", "Soft", "Real", "Scale", "Original", "Character", "FNex", "Nex", "Pop", "Up", "Parade", "Figure", "Illustration", "Deluxe", "Normal", "Rebels", "Model Replica",
+         "Uodenim", "Chihiro", "Magician", "Elf", "Villager", "Antenna", "Shop", "Limited", "Exclusive", "Bonus", "Item", "Scale", "Dunny", "Art", "Collectible", "Menu", "Item", "Design", "Designer", "Anniversary",
+         "Set", "Replica", "Life-Size", "Tenitol", "Concept", "Silicone", "Shippuden", "Light Armor", "Version", "A", "Cyber Pets", "Antenna Shop Limited Edition",
+         "Regular", "Illustrated", "Kimetsu", "Yaiba", "Noodle Stopper", "Avengers", "Doomsday", "BDS", "Rivals", "Gamerverse", "Format", "Ultra II The Final Challengers",
+         "TOHO Daikaiju Favorite Sculptors Line", "TOHO", "POP", "Cyberpunk Edgerunners", "Five Nights", "FNAF", "Six Collection Chibi", "Figures", "ReAction", "III", "Model Kit", "Episode",
+         "Doll", "Chinese-Style", "The Shiny Colors", "Masterpiece", "Movie", "Mini", "My Little Pony", "Bishoujo", "BLOOM", "Brickroid", "Figma", "Crane Kick", "The Fandom", "Fandom", "Gwaihir",
+         "Classified Nemesis Immortal", "Karasuno", "Surprise", "Brotherhood", "Clothed", "Frieren Beyond Journeys", "Star Wars", "The Clone Wars", "Arc Trooper", "The Mandalorian", "The Phantom Menace",
          "STAP", "The Bad Batch", "Plastic Model", "The New Empire", "Exquisite", "Basic", "Predator: Badlands", "Monitor Buddiez", "Reality Resort", "Rubber", "Grogu",
-         "Granite Waves", "Finding Frankie", "Content Warning", "Godzilla x Kong", "LoveLive Hasunosora Girls High School Idol Club", "UDF", "Prestige Line", "Oshi Works", "Figuarts",
-         "FiguartsZERO", "IKIGAI", "Interactive Toy", "Interactive", "Preorder", "Size", "Gorg", "Accessory", "FigZero", "Moderoid", "Wise", "Kadokawa", "Merchant", "Meets"]
+         "Granite Waves", "Finding Frankie", "Content Warning", "Godzilla x Kong", "LoveLive Hasunosora Girls High School Idol Club", "UDF", "Prestige Line", "Oshi Works", "Figuarts", "Outfit",
+         "FiguartsZERO", "IKIGAI", "Interactive Toy", "Tubbz", "Wall Mount", "Roleplay", "Keyring", "SquarePants", "Desktop", "Collection", "Chibi", "Swimsuit",
+         "Helmet", "Part", "Diorama", "Evolution Epic", "Display", "Interactive", "Preorder", "Size", "Gorg", "Accessory", "FigZero", "Moderoid", "Wise", "Playset",
+         "Kadokawa", "Merchant", "Meets", "Collectoys", "StarCraft",
+         }
 SERIES_ALIASES = {
     # Frieren
     "frieren": "Frieren: Beyond Journey's End",
@@ -236,6 +371,7 @@ SERIES_ALIASES = {
     "hatsune miku": "Vocaloid",
     "kasane teto": "Vocaloid",
     "luo tianyi": "Vocaloid",
+    "racing miku": "Vocaloid",
 
     # === Marvel Universe ===
     "marvel": "Marvel",
@@ -405,8 +541,8 @@ def scrape_yatta(url="https://yatta.pl/Figurki,4,s"):
     max_A=int(match.group(1)) if match else 22
 
 
-    # for pg in range(1, max_A+1):
-    for pg in range(1,12):
+    for pg in range(1, 10):
+    # for pg in range(1,16):
         time.sleep(1)
         print(f"Extracting page {pg}")
         full_link=f"{url}?A={pg}&B=80"
@@ -489,7 +625,8 @@ def extract(link: str):
     # interesting_part=soup.find("div", style="margin-top:10px;")
     # print(interesting_part.get_text())
 
-    fig_name=soup.find("h2", class_="tytul").get_text().strip()
+    raw_title = soup.find("h2", class_="tytul").get_text()
+    fig_name = re.sub(r'\s+', ' ', raw_title).strip()
     if fig_name:
         res['fig_name']=fig_name
     # print(fig_name)
@@ -597,7 +734,7 @@ def extract(link: str):
             fig_strp=fig_strp.replace(res.get("series_title"),"").strip()
         if res.get("manufacturer"):
             fig_strp=fig_strp.replace(res.get("manufacturer"),"").strip()
-        fig_strp=re.sub(r'[^a-zA-Z\- ]', "", fig_strp).strip()
+        fig_strp=re.sub(r'[^a-zA-Z0-9/\- ]', "", fig_strp).strip()
         # print(fig_strp)
 
         if fig_strp and desc_text:
@@ -677,6 +814,7 @@ def get_name_from_desc(fig_strp, desc, series_title=""):
 
     combined_text = f"{fig_strp}. {desc}"
     patterns = [
+        r"(?:[Nn]endoroid|[Ff]igma)\s+([A-Z][a-zA-Z\-]+(?:\s[A-Z][a-zA-Z\-]+)?)",
         r"(?:[Nn]endoroid|[Ff]igure|[Ss]tatue|[Ff]igma)\s+(?:of|is)\s+([A-Z][a-z]+(?:\s[A-Z][a-z]+)?)",
         r"[Pp]resenting\s+([A-Z][a-z]+(?:\s[A-Z][a-z]+)?)",
         r"[Cc]omes\s+a\s+.*?\s+of\s+([A-Z][a-z]+(?:\s[A-Z][a-z]+)?)",
@@ -738,7 +876,7 @@ def get_name_from_MFC(code):
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
 
-    resp = requests.get(url, headers=hd, timeout=60)
+    resp = requests.get(url, headers=headers, timeout=60)
     if not resp.ok:
         print("response not ok!")
         print(f"error while assessing {code}")

@@ -1,95 +1,209 @@
 fig_name,price,link,code,series_title,manufacturer,status,scale,store,ch_name,error_reason
+Death Note Plush Figure L 25 cm,110.94,"https://yatta.pl/Death_Note_Plush_Figure_L_25_cm,78080,p",4260434770030,Death Note,Sakami Merchandise,StatusEnum.AVAILABLE,25 cm,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_JoJo_s_Bizarre_Adventure_Chozokado_PVC_Figures_2_Pa,322599,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
 ,,"https://yatta.pl/Preorder_Jujutsu_Kaisen_Nendoroid_Doll_Outfit_Set_Yuta_Okkot,321505,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Batman_DC_Direct_Replica_1_1_Batman_Beyond_Mask_58,322661,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+"Warhammer 40,000 Action Figure Black Templars Terminator 2 with Power Fist and Storm Bolter 14 cm",212.81,"https://yatta.pl/Preorder_Warhammer_40_000_Action_Figure_Black_Templars_Termi,307698,p",6927054403103,Warhammer,Joy Toy (CN),StatusEnum.PREORDER,14 cm,StoreEnum.YATTA,,No character name
+"Warhammer 40,000 Action Figure Raven Guard Terminator 3 with Power Fist and Assault Cannon 14 cm",212.81,"https://yatta.pl/Preorder_Warhammer_40_000_Action_Figure_Raven_Guard_Terminat,307716,p",6927054403264,Warhammer,Joy Toy (CN),StatusEnum.PREORDER,14 cm,StoreEnum.YATTA,,No character name
 ,,"https://yatta.pl/Preorder_Touhou_Project_Reverse_Palm_Spirit_PVC_Figures_2_Pa,321905,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+"Warhammer 40,000 Action Figure Imperial Fists Terminator 2 with Power Fist and Storm Bolter 14 cm",212.81,"https://yatta.pl/Preorder_Warhammer_40_000_Action_Figure_Imperial_Fists_Termi,307704,p",6927054403165,Warhammer,Joy Toy (CN),StatusEnum.PREORDER,14 cm,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Harry_Potter_Magical_Creatures_Statue_Gringotts_Goblin_19_cm,92316,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_New_Panty_Stocking_with_Garterbelt_Figma_Action_Fig,321246,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Resident_Evil_Collectable_Coin_30th_Anniversary_Ant,315186,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Resident_Evil_VIII_Collectable_Coin_Currency_Limited_Edition,221549,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Deadpool_Wolverine_Premium_Roleplay_Mask_Wolverine,302120,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Kotobukiya_M_S_G_Model_Kit_Accessory_Set_Expansion,322506,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Kotobukiya_M_S_G_Model_Kit_Accessory_Set_Heavy_Weap,321796,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Kotobukiya_M_S_G_Model_Kit_Accessory_Set_Mecha_Supp,305007,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Kotobukiya_M_S_G_Model_Kit_Accessory_Set_Mission_Cl,322505,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Kotobukiya_M_S_G_Model_Kit_Accessory_Set_Virtuous_S,322507,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
 Mega Man Exquisite Basic Action Figure X Max Armor 15 cm,689.86,"https://yatta.pl/Preorder_Mega_Man_Exquisite_Basic_Action_Figure_X_Max_Armor,319486,p",6957534205514,Mega Man,Hiya Toys,StatusEnum.PREORDER,15 cm,StoreEnum.YATTA,X,Pydantic data validation error
 Mega Man X Exquisite Basic Action Figure X Ultimate Armor Version 16 cm,653.66,"https://yatta.pl/Preorder_Mega_Man_X_Exquisite_Basic_Action_Figure_X_Ultimate,319118,p",6957534205378,Mega Man,Hiya Toys,StatusEnum.PREORDER,16 cm,StoreEnum.YATTA,X,Pydantic data validation error
-,,"https://yatta.pl/Preorder_Avengers_Doomsday_Movie_Masterpiece_Action_Figure_A,320335,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Preorder_Marvel_Games_Marvel_Legends_Action_Figure_2_Pack_Ir,321771,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Preorder_Marvel_Games_Marvel_Legends_Action_Figure_2_Pack_Wo,321848,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Preorder_Marvel_Legends_Action_Figure_3_Pack_X_Force_15_cm,321775,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-Jurassic World: Dominion Demi Art Scale Statue 1/20 Therizinosaurus 29 cm,3243.26,"https://yatta.pl/Preorder_Jurassic_World_Dominion_Demi_Art_Scale_Statue_1_20,281326,p",618231957644,Jurassic Park,Iron Studios,StatusEnum.PREORDER,1/20,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Harry_Potter_Magical_Creatures_Statue_Gringotts_Goblin_19_cm,92316,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Preorder_Chainsaw_Man_The_Movie_Reze_Arc_Parts_for_Nendoroid,321687,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Preorder_Chainsaw_Man_Nendoroid_Basic_Action_Figure_Power_Ca,321867,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Preorder_Chainsaw_Man_Parts_for_Nendoroid_Doll_Figures_Outfi,320936,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Preorder_New_Panty_Stocking_with_Garterbelt_Figma_Action_Fig,321246,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
 ,,"https://yatta.pl/Preorder_Power_Rangers_Collectable_Coin_Red_Ranger_Limited_E,321571,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
 ,,"https://yatta.pl/Preorder_Power_Rangers_Replica_Interchangeable_Power_Morpher,321596,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Daredevil_Born_Again_Premium_Roleplay_Mask_and_Billy_Club,303265,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Persona_5_Royal_Parts_for_Nendoroid_Doll_Figures_Ou,320938,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+Yu-Gi-Oh! Statue The Millenium Puzzle 18 cm,1198.30,"https://yatta.pl/Yu_Gi_Oh_Statue_The_Millenium_Puzzle_18_cm,294349,p",3521320425054,Yu-Gi-Oh,Taka Corp Studio,StatusEnum.AVAILABLE,18 cm,StoreEnum.YATTA,,No character name
 ,,"https://yatta.pl/Preorder_The_Elder_Scrolls_Collectable_Coin_Septim_Misty_Gol,301379,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
 ,,"https://yatta.pl/Preorder_The_Elder_Scrolls_Replica_Metal_Map_of_Tamriel_Limi,321592,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
 ,,"https://yatta.pl/Preorder_The_Elder_Scrolls_V_Replica_Skyrim_Nahkriin_Dragon,312665,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Resident_Evil_VIII_Collectable_Coin_Currency_Limited_Edition,221549,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-POP! Vinyl: Naruto Shippuden: Naruto Rasengan,55.00,"https://yatta.pl/POP_Vinyl_Naruto_Shippuden_Naruto_Rasengan,157342,p",889698129978,,,StatusEnum.UNAVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Preorder_DC_Comics_Art_Mask_Replica_1_1_Batman_Who_Laughs_51,320705,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Preorder_Teenage_Mutant_Ninja_Turtles_Collectable_Coin_Krang,308299,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Preorder_Teenage_Mutant_Ninja_Turtles_Ingot_Villain_Limited,321594,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Pok_mon_Coral_Hooded_Blanket_Pikachu_120_x_150_cm,275708,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Pok_mon_Duvet_Set_Pikachu_140_x_200_cm_70_x_90_cm,270274,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Pok_mon_Duvet_Set_Ver_10_140_x_200_cm_70_x_90_cm,284583,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Pok_mon_Duvet_Set_Ver_11_140_x_200_cm_70_x_90_cm,284584,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Pok_mon_Duvet_Set_Ver_14_140_x_200_cm_70_x_90_cm,296996,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Pok_mon_Duvet_Set_Ver_5_140_x_200_cm_70_x_90_cm,273671,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Preorder_ANTOO_Wonderland_Mini_Figures_4_Pack_Furry_20_cm_Bl,321849,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Preorder_Silent_Hill_Nendoroid_Action_Figure_Fox_Mask_10_cm,321880,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-Godzilla Vinyl Figure Godzilla the Destroyer 10 cm,221.16,"https://yatta.pl/Godzilla_Vinyl_Figure_Godzilla_the_Destroyer_10_cm,273466,p",810140781154,Godzilla,Youtooz,StatusEnum.AVAILABLE,10 cm,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/My_Neighbor_Totoro_Funwari_Mini_Plush_Coin_Purse_Big_Totoro,298711,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/My_Neighbor_Totoro_Funwari_Mini_Plush_Coin_Purse_Small_Totor,298713,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Kiki_s_Delivery_Service_Funwari_Mini_Plush_Coin_Pur,298716,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Princess_Mononoke_Funwari_Mini_Plush_Coin_Purse_San_s_Mask,298717,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
 ,,"https://yatta.pl/Fallout_3_Replica_Vault_101_Security_Keycard_Limited_Edition,301421,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
 ,,"https://yatta.pl/Fallout_Collectable_Coin_Decision_Black_White_Limited_Editio,278476,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
 ,,"https://yatta.pl/Fallout_Collectible_Ingot_Pip_Boy_Limited_Edition,306958,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
 ,,"https://yatta.pl/Fallout_Medallion_Silverymoon_Insignia_Limited_Edition,238390,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Preorder_Persona_5_Royal_Parts_for_Nendoroid_Doll_Figures_Ou,320938,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-Predator Statue 1/2 Predator 117 cm,36677.00,"https://yatta.pl/Preorder_Predator_Statue_1_2_Predator_117_cm,318478,p",783214380242,Predator,Premium Collectibles Studio,StatusEnum.PREORDER,1/2,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Preorder_Hololive_Production_G_S_Collection_PVC_Figure_1_7_O,320066,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Preorder_Hololive_Production_G_S_Collection_PVC_Figure_1_7_S,320065,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
 ,,"https://yatta.pl/Preorder_K_ON_Outfit_Set_for_Nendoroid_Doll_Yui_Hirasawa,320561,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/One_Piece_Board_Game_Adventure_Island_English_Version,262807,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/One_Piece_Duvet_Set_Ver_5_140_x_200_cm_70_x_90_cm,284582,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/One_Piece_Ramen_Bowl_with_Chopsticks_Classic,275392,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Preorder_One_Piece_Replica_10_000_World_Berry_Metal_Banknote,317843,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-Blue Lock PVC Figure - Nendoroid Surprise Assortment (6),552.90,"https://yatta.pl/Blue_Lock_PVC_Figure_Nendoroid_Surprise_Assortment_6,307070,p",,Blue Lock,Orange Rouge,StatusEnum.AVAILABLE,7cm,StoreEnum.YATTA,,No character name
 ,,"https://yatta.pl/Preorder_Off_Campus_PVC_Figures_2_Pack_Dean_and_Allie_12_cm,320126,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
 ,,"https://yatta.pl/Preorder_Off_Campus_PVC_Figures_2_Pack_Hanna_and_Garrett_13,320125,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Silent_Hill_Nendoroid_Action_Figure_Fox_Mask_10_cm,321880,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/One_Piece_Board_Game_Adventure_Island_English_Version,262807,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/One_Piece_Ramen_Bowl_with_Chopsticks_Classic,275392,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_One_Piece_Replica_10_000_World_Berry_Metal_Banknote,317843,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Chainsaw_Man_The_Movie_Reze_Arc_Parts_for_Nendoroid,321687,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Chainsaw_Man_Parts_for_Nendoroid_Doll_Figures_Outfi,320936,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+Predator Statue 1/2 Predator 117 cm,36677.00,"https://yatta.pl/Preorder_Predator_Statue_1_2_Predator_117_cm,318478,p",783214380242,Predator,Premium Collectibles Studio,StatusEnum.PREORDER,1/2,StoreEnum.YATTA,,No character name
+Blue Lock PVC Figure - Nendoroid Surprise Assortment (6),552.90,"https://yatta.pl/Blue_Lock_PVC_Figure_Nendoroid_Surprise_Assortment_6,307070,p",,Blue Lock,Orange Rouge,StatusEnum.AVAILABLE,7cm,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Dancouga_Super_Beast_Machine_God_Moderoid_Plastic_M,321292,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+Super Sonico PVC Figure 1/6 Exercise Ver. 27 cm,1577.71,"https://yatta.pl/Preorder_Super_Sonico_PVC_Figure_1_6_Exercise_Ver_27_cm,319704,p",4595316221608,Super Sonico,Solarain,StatusEnum.PREORDER,1/6,StoreEnum.YATTA,,No character name
+POP Keychain: Fantastic Beasts 2 - 2,29.00,"https://yatta.pl/POP_Keychain_Fantastic_Beasts_2_2,155694,p",889698327688,Harry Potter,,StatusEnum.UNAVAILABLE,4 cm,StoreEnum.YATTA,,No character name
+POP Keychain: Fantastic Beasts 2 - 3,29.00,"https://yatta.pl/POP_Keychain_Fantastic_Beasts_2_3,155695,p",889698327695,Harry Potter,,StatusEnum.UNAVAILABLE,4 cm,StoreEnum.YATTA,,No character name
+POP Keychain: Fantastic Beasts 2 - 4,29.00,"https://yatta.pl/POP_Keychain_Fantastic_Beasts_2_4,155696,p",889698327701,Harry Potter,,StatusEnum.UNAVAILABLE,4 cm,StoreEnum.YATTA,,No character name
 ,,"https://yatta.pl/One_Piece_Chokorin_Mascot_Series_Trading_Figure_6_Pack_Egghe,295681,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+One Piece Figure Set First Voyage 10 cm,355.16,"https://yatta.pl/Preorder_One_Piece_Figure_Set_First_Voyage_10_cm,322734,p",801269165017,One Piece,Nemesis Now,StatusEnum.PREORDER,10 cm,StoreEnum.YATTA,,No character name
 ,,"https://yatta.pl/DC_Comics_Throne_Legacy_Collection_Statue_1_3_Batman_Tactica,233055,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-Plushi Plush Figure Nigiri with Egg 20 cm,86.81,"https://yatta.pl/Plushi_Plush_Figure_Nigiri_with_Egg_20_cm,267854,p",8052780422819,Original Character / Unknown,Joy Toy (IT),StatusEnum.AVAILABLE,20 cm,StoreEnum.YATTA,,No character name
-Plushi Plush Figure Uramaki Sushi with Salmon 20 cm,86.81,"https://yatta.pl/Plushi_Plush_Figure_Uramaki_Sushi_with_Salmon_20_cm,267856,p",8052780424721,Original Character / Unknown,Joy Toy (IT),StatusEnum.AVAILABLE,20 cm,StoreEnum.YATTA,,No character name
-Glock9 Plush Figure Farmer Glock 22 cm,183.71,"https://yatta.pl/Preorder_Glock9_Plush_Figure_Farmer_Glock_22_cm,307405,p",810208711918,Original Character / Unknown,Youtooz,StatusEnum.PREORDER,22 cm,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Megami_Device_M_S_G_Plastic_Model_Kit_1_1_09_Hand_S,322093,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Teenage_Mutant_Ninja_Turtles_Collectable_Coin_Krang,308299,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Teenage_Mutant_Ninja_Turtles_Ingot_Villain_Limited,321594,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_ANTOO_Wonderland_Mini_Figures_4_Pack_Furry_20_cm_Bl,321849,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
 ,,"https://yatta.pl/Ticket_to_Ride_Ingot_Trans_America_Express_Limited_Edition,236910,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-Yummis Plush Figure Onigiri 22 cm,86.81,"https://yatta.pl/Yummis_Plush_Figure_Onigiri_22_cm,292496,p",8053172180775,Original Character / Unknown,Joy Toy (IT),StatusEnum.AVAILABLE,22 cm,StoreEnum.YATTA,,No character name
-Yummis Plush Figure Ramen 20 cm,86.81,"https://yatta.pl/Yummis_Plush_Figure_Ramen_20_cm,267878,p",8052780424387,Original Character / Unknown,Joy Toy (IT),StatusEnum.AVAILABLE,20 cm,StoreEnum.YATTA,,No character name
 Rick and Morty Mystery Mini Figures 5 cm (losowa figurka),35.00,"https://yatta.pl/Rick_and_Morty_Mystery_Mini_Figures_5_cm_losowa_figurka,134484,p",889698130356,,,StatusEnum.UNAVAILABLE,5 cm,StoreEnum.YATTA,,No character name
-Ace Ventura Clothed Action Figure Ace Ventura 20 cm,315.31,"https://yatta.pl/Preorder_Ace_Ventura_Clothed_Action_Figure_Ace_Ventura_20_cm,321724,p",634482149744,Ace Ventura,NECA,StatusEnum.PREORDER,20 cm,StoreEnum.YATTA,,No character name
-Lord of the Rings Statue Barad-dur 19 cm,712.58,"https://yatta.pl/Preorder_Lord_of_the_Rings_Statue_Barad_dur_19_cm,306963,p",9420024742266,Lord of the Rings,Weta Workshop,StatusEnum.PREORDER,19 cm,StoreEnum.YATTA,,No character name
-Blue Archive Action Figure - Figma Yuuka Hayase,629.90,"https://yatta.pl/Blue_Archive_Action_Figure_Figma_Yuuka_Hayase,283427,p",,Blue Archive,Max Factory,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Preorder_Yu_Gi_Oh_Medallion_Exodia_Head_Limited_Edition,321579,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-Yu-Gi-Oh! Statue The Millenium Puzzle 18 cm,1198.30,"https://yatta.pl/Yu_Gi_Oh_Statue_The_Millenium_Puzzle_18_cm,294349,p",3521320425054,Yu-Gi-Oh,Taka Corp Studio,StatusEnum.AVAILABLE,18 cm,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Preorder_Masters_of_the_Universe_Replica_Metal_Map_of_Eterni,321581,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-Star Wars Episode VII POP! Vinyl Bobble-Head Kylo Ren 10 cm,55.00,"https://yatta.pl/Star_Wars_Episode_VII_POP_Vinyl_Bobble_Head_Kylo_Ren_10_cm,66377,p",849803062279,Star Wars,Funko,StatusEnum.UNAVAILABLE,10 cm,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Gundam_G_M_G_Collection_EX_Action_Figures_2_Pack_Ne,322263,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_JoJo_s_Bizarre_Adventure_Stone_Ocean_PtZ_Acrylic_Di,322576,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
 One Piece Mini Action Figure,45.34,"https://yatta.pl/Preorder_One_Piece_Mini_Action_Figure,312616,p",630996633021,One Piece,Moose Toys,StatusEnum.PREORDER,,StoreEnum.YATTA,,No character name
-Frieren: Beyond Journey's End PVC Figure - Nendoroid ActionMimic,370.90,"https://yatta.pl/Frieren_Beyond_Journey_s_End_PVC_Figure_Nendoroid_ActionMimi,292888,p",,Frieren: Beyond Journey's End,Good Smile Company,StatusEnum.AVAILABLE,10 cm,StoreEnum.YATTA,,No character name
-Pokémon Squishmallows Plush Figure Happy Pikachu 25 cm,180.57,"https://yatta.pl/Pok_mon_Squishmallows_Plush_Figure_Happy_Pikachu_25_cm,300884,p",196566198166,Squishmallows,Jazwares,StatusEnum.AVAILABLE,25 cm,StoreEnum.YATTA,,No character name
-Tung Tung Tung Sahur Vinyl Figure 11 cm,218.55,"https://yatta.pl/Preorder_Tung_Tung_Tung_Sahur_Vinyl_Figure_11_cm,321494,p",0810222376308,Tung Tung Tung Sahur,Youtooz,StatusEnum.PREORDER,11 cm,StoreEnum.YATTA,,No character name
+Blue Archive Action Figure - Figma Yuuka Hayase,629.90,"https://yatta.pl/Blue_Archive_Action_Figure_Figma_Yuuka_Hayase,283427,p",,Blue Archive,Max Factory,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Helluva_Boss_Mini_Tooz_Mini_Figures_3_Pack_Blitzo_L,311339,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+Star Wars Episode VII POP! Vinyl Bobble-Head Kylo Ren 10 cm,55.00,"https://yatta.pl/Star_Wars_Episode_VII_POP_Vinyl_Bobble_Head_Kylo_Ren_10_cm,66377,p",849803062279,Star Wars,Funko,StatusEnum.UNAVAILABLE,10 cm,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Yu_Gi_Oh_Medallion_Exodia_Head_Limited_Edition,321579,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Yu_Gi_Oh_Ingot_Tablet_of_Memories_Limited_Edition,254825,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
 ,,"https://yatta.pl/Preorder_Doom_The_Dark_Ages_Medallion_Saw_Shield,287105,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-Squishmallow Plush Figure Pokémon Fuecoco 20 cm,126.90,"https://yatta.pl/Squishmallow_Plush_Figure_Pok_mon_Fuecoco_20_cm,279356,p",191726494812,Squishmallows,Jazwares,StatusEnum.AVAILABLE,20 cm,StoreEnum.YATTA,,No character name
-Star Wars Plastic Model Kit 1/72 TIE Fighter,220.16,"https://yatta.pl/Star_Wars_Plastic_Model_Kit_1_72_TIE_Fighter,155310,p",4009803012018,Star Wars,Bandai,StatusEnum.AVAILABLE,1/72,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Milky_Subway_The_Galactic_Limited_Express_PVC_Figur,319873,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Little_Nightmares_II_Minitooz_3_Pack_Mono_Six_Hunte,322183,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
 ,,"https://yatta.pl/Original_Character_Accessories_for_Nendoroid_Doll_Figures_Ou,265552,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
 Star Wars Episode VII Model Kit 1/144 Millennium Falcon,818.09,"https://yatta.pl/Star_Wars_Episode_VII_Model_Kit_1_144_Millennium_Falcon,218887,p",4009803012117,Star Wars,Bandai Star Wars,StatusEnum.AVAILABLE,1/144,StoreEnum.YATTA,,No character name
-Star Wars Episode VII Model Kit 1/52 Snowspeeder 10 cm,58.79,"https://yatta.pl/Star_Wars_Episode_VII_Model_Kit_1_52_Snowspeeder_10_cm,77972,p",4009803036045,Star Wars,Revell,StatusEnum.AVAILABLE,1/52,StoreEnum.YATTA,,No character name
-Star Wars Model Kit 1/72 Millennium Falcon 38 cm,361.27,"https://yatta.pl/Star_Wars_Model_Kit_1_72_Millennium_Falcon_38_cm,184640,p",4009803067186,Star Wars,Revell,StatusEnum.AVAILABLE,1/72,StoreEnum.YATTA,,No character name
 Star Wars Model Kit 1/72 Y-Wing Starfighter 22 cm,389.70,"https://yatta.pl/Star_Wars_Model_Kit_1_72_Y_Wing_Starfighter_22_cm,198171,p",4009803012094,Star Wars,Bandai Star Wars,StatusEnum.AVAILABLE,1/72,StoreEnum.YATTA,,No character name
 Star Wars Plastic Model Kit 1/48 AT-ST,233.95,"https://yatta.pl/Star_Wars_Plastic_Model_Kit_1_48_AT_ST,155311,p",4009803012025,Star Wars,Bandai,StatusEnum.AVAILABLE,1/48,StoreEnum.YATTA,,No character name
-Star Wars The Mandalorian Model Kit 1/72 The Razor Crest 34 cm,391.32,"https://yatta.pl/Star_Wars_The_Mandalorian_Model_Kit_1_72_The_Razor_Crest_34,198229,p",4009803067810,Star Wars,Revell,StatusEnum.AVAILABLE,1/72,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Spy_x_Family_PVC_Figure_Nendoroid_Loid_Forger_Casual_Outfit,293334,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Spy_x_Family_PVC_Figure_Nendoroid_Yor_Forger_Casual_Outfit_V,293329,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-Five Nights at Freddy´s Tubbz Mini PVC Figure Foxy 5 cm,52.50,"https://yatta.pl/Five_Nights_at_Freddy_s_Tubbz_Mini_PVC_Figure_Foxy_5_cm,277855,p",5056280460077,Five Nights at Freddy’s,Numskull,StatusEnum.AVAILABLE,5 cm,StoreEnum.YATTA,,No character name
-Five Nights at Freddy´s Tubbz PVC Figure Bonnie Boxed Edition 10 cm,111.31,"https://yatta.pl/Five_Nights_at_Freddy_s_Tubbz_PVC_Figure_Bonnie_Boxed_Editio,313367,p",5056280463566,Five Nights at Freddy’s,Numskull,StatusEnum.AVAILABLE,10 cm,StoreEnum.YATTA,,No character name
-Five Nights at Freddy´s Tubbz PVC Figure Chica Boxed Edition 10 cm,111.31,"https://yatta.pl/Five_Nights_at_Freddy_s_Tubbz_PVC_Figure_Chica_Boxed_Edition,313365,p",5056280463542,Five Nights at Freddy’s,Numskull,StatusEnum.AVAILABLE,10 cm,StoreEnum.YATTA,,No character name
+Star Wars Plastic Model Kit 1/72 TIE Fighter,220.16,"https://yatta.pl/Star_Wars_Plastic_Model_Kit_1_72_TIE_Fighter,155310,p",4009803012018,Star Wars,Bandai,StatusEnum.AVAILABLE,1/72,StoreEnum.YATTA,,No character name
+Star Wars Plastic Model Kit 1/72 X-Wing Starfighter,233.95,"https://yatta.pl/Star_Wars_Plastic_Model_Kit_1_72_X_Wing_Starfighter,155309,p",4009803012001,Star Wars,Bandai,StatusEnum.AVAILABLE,1/72,StoreEnum.YATTA,,No character name
 Funko Pop The Nightmare Before Christmas Behemoth,55.00,"https://yatta.pl/Funko_Pop_The_Nightmare_Before_Christmas_Behemoth,151644,p",889698112475,,,StatusEnum.UNAVAILABLE,,StoreEnum.YATTA,,No character name
-Super Sonico PVC Figure 1/6 Exercise Ver. 27 cm,1577.71,"https://yatta.pl/Preorder_Super_Sonico_PVC_Figure_1_6_Exercise_Ver_27_cm,319704,p",4595316221608,Super Sonico,Solarain,StatusEnum.PREORDER,1/6,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_South_Park_Plush_Figure_Towelie_Plush_22_cm,234062,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
 Bocchi the Rock! PVC Figure - Nendoroid Children of the Light,391.90,"https://yatta.pl/Bocchi_the_Rock_PVC_Figure_Nendoroid_Children_of_the_Light,272023,p",,Bocchi the Rock!,Good Smile Company,StatusEnum.AVAILABLE,10 cm,StoreEnum.YATTA,,No character name
-Power Rangers Auto-Morphin Action Figure Green Ranger 15 cm,92.59,"https://yatta.pl/Preorder_Power_Rangers_Auto_Morphin_Action_Figure_Green_Rang,321335,p",0043377680482,Power Rangers,Playmates,StatusEnum.PREORDER,15 cm,StoreEnum.YATTA,,No character name
-"Warhammer 40,000 Action Figure Black Templars Terminator 2 with Power Fist and Storm Bolter 14 cm",212.81,"https://yatta.pl/Preorder_Warhammer_40_000_Action_Figure_Black_Templars_Termi,307698,p",6927054403103,Warhammer,Joy Toy (CN),StatusEnum.PREORDER,14 cm,StoreEnum.YATTA,,No character name
-"Warhammer 40,000: Space Marine 2 Action Figure Ultramarines Relic Secundus Armour 20 cm",408.84,"https://yatta.pl/Warhammer_40_000_Space_Marine_2_Action_Figure_Ultramarines_R,289528,p",6927054401536,Warhammer,Joy Toy (CN),StatusEnum.AVAILABLE,20 cm,StoreEnum.YATTA,,No character name
-Warhammer 40k Action Figure 1/18 Ultramarines Primarch Roboute Guilliman 12 cm,889.55,"https://yatta.pl/Warhammer_40k_Action_Figure_1_18_Ultramarines_Primarch_Robou,231290,p",6973130376342,Warhammer,Joy Toy (CN),StatusEnum.AVAILABLE,1/18,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Dragon_Ball_Z_XXL_Desk_Mat,269273,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-,,"https://yatta.pl/Dragon_Ball_Z_XXL_Desk_Mat_Gokus_Friends,279018,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
-Book Nook Darkness Common Room 23 x 11 cm,247.47,"https://yatta.pl/Preorder_Book_Nook_Darkness_Common_Room_23_x_11_cm,306990,p",6975436180326,Original Character / Unknown,CuteBee,StatusEnum.PREORDER,11 cm,StoreEnum.YATTA,X,Pydantic data validation error
+,,"https://yatta.pl/Preorder_Demon_Slayer_Kimetsu_no_Yaiba_Towel_Swordsmith_Vill,298780,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Dungeons_Dragons_Foam_Mace_Cleric_90_cm,287492,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Dungeons_Dragons_Foam_Staff_Wizards_155_cm,287493,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Dungeons_Dragons_Ingot_Vecna_Eve_of_Ruin_Limited_Edition,270758,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Dungeons_Dragons_Foam_axe_Barbarian,287495,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Dungeons_Dragons_Foam_short_sword_Ranger,287496,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Dungeons_Dragons_Foam_sword_Waterdeep_Blade_90_cm,287490,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Dungeons_Dragons_Ingot_Monster_Manual_Alternate_Cov,306336,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+Funko Pop! Star Wars Pen Toppers Rey,19.00,"https://yatta.pl/Funko_Pop_Star_Wars_Pen_Toppers_Rey,146640,p",889698212649,,,StatusEnum.UNAVAILABLE,,StoreEnum.YATTA,,No character name
+Transformers Blokees Plastic Model Kit Classic Class 07 Arcee 25 cm,87.96,"https://yatta.pl/Transformers_Blokees_Plastic_Model_Kit_Classic_Class_07_Arce,258561,p",6972984886236,Transformers,Blokees,StatusEnum.AVAILABLE,25 cm,StoreEnum.YATTA,,No character name
+Transformers Blokees Plastic Model Kit Classic Class 12 Megatron,99.25,"https://yatta.pl/Transformers_Blokees_Plastic_Model_Kit_Classic_Class_12_Mega,265270,p",858050008572,Transformers,Blokees,StatusEnum.AVAILABLE,13 cm,StoreEnum.YATTA,,No character name
+Transformers Blokees Plastic Model Kit Classic Class 13 Elita,86.96,"https://yatta.pl/Transformers_Blokees_Plastic_Model_Kit_Classic_Class_13_Elit,265271,p",858050008589,Transformers,Blokees,StatusEnum.AVAILABLE,13 cm,StoreEnum.YATTA,,No character name
+Transformers Blokees Plastic Model Kit Classic Class 16 Starsream,100.22,"https://yatta.pl/Transformers_Blokees_Plastic_Model_Kit_Classic_Class_16_Star,276612,p",810181530032,Transformers,Blokees,StatusEnum.AVAILABLE,13 cm,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Doom_2_Replica_Arena_Floppy_Disk_Limited_Edition,278479,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Doom_The_Dark_Ages_Replica_Shield_Saw_Mini_18_cm,289500,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/My_Melody_for_Nendoroid_Doll_Figures_Outfit_Set_Kigurumi_Paj,246901,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+My Dress-Up Darling XXL Mousepad Marin Shizuku Cosplay 80 x 40 cm,140.38,"https://yatta.pl/My_Dress_Up_Darling_XXL_Mousepad_Marin_Shizuku_Cosplay_80_x,271629,p",8721126701160,My Dress-Up Darling,Sakami Merchandise,StatusEnum.AVAILABLE,40 cm,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_My_Dress_Up_Darling_Towel_Marin_Shizuku_Cosplay_150,298779,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Persona_5_Royal_Pin_Badges_2_Pack_Oracle_Futaba_Sakura,241545,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Sanrio_Ramen_Bowl_with_Chopsticks_Hello_Kitty_Japan,275402,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Nendoroid_More_Decorative_Parts_for_Nendoroid_Figures_Face_S,247510,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Masters_of_the_Universe_2026_Collectable_Coin_He_Ma,313142,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Masters_of_the_Universe_Replica_Metal_Map_of_Eterni,321581,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Masters_of_the_Universe_Replica_Throne_216_cm,322547,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Diablo_Collectable_Coin_30th_Anniversary_Limited_Ed,321584,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Diablo_Replica_30th_Anniversary_CD_ROM_Limited_Edit,321583,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_World_of_Warcraft_Collectable_Coin_Faction_Limited,321565,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_World_of_Warcraft_Replica_CD_ROM_Limited_Edition_11,315194,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_World_of_Warcraft_Replica_Metal_Map_of_Azeroth_Limi,321590,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+Fate/Grand Order PVC Figure - Nendoroid Assassin/Yu Mei-ren,426.90,"https://yatta.pl/Fate_Grand_Order_PVC_Figure_Nendoroid_Assassin_Yu_Mei_ren,253897,p",,Fate,Good Smile Company,StatusEnum.AVAILABLE,10 cm,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Flying_Bulls_Revell_Gift_Set_T_28B_Trojan,314657,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Flying_Bulls_Revell_Model_Kit_North_American_B_25J,314658,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Star_Wars_Porcelain_Statue_Queen_Amidala_in_Throne,209175,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+BRZRKR Real Elite Masterline Statue 1/4 B 69 cm,13311.10,"https://yatta.pl/Preorder_BRZRKR_Real_Elite_Masterline_Statue_1_4_B_69_cm,319015,p",4582647125460,BRZRKR,Prime 1 Studio,StatusEnum.PREORDER,1/4,StoreEnum.YATTA,B,Pydantic data validation error
+BRZRKR Real Elite Masterline Statue 1/4 B Deluxe Version 70 cm,15918.90,"https://yatta.pl/Preorder_BRZRKR_Real_Elite_Masterline_Statue_1_4_B_Deluxe_Ve,319016,p",4582647125477,BRZRKR,Prime 1 Studio,StatusEnum.PREORDER,1/4,StoreEnum.YATTA,B,Pydantic data validation error
+Simpsons Roleplay Replica Moes Prank Phone,363.83,"https://yatta.pl/Simpsons_Roleplay_Replica_Moes_Prank_Phone,262274,p",192995175556,Simpsons,Jakks Pacific,StatusEnum.AVAILABLE,25 cm,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Simpsons_Mini_Figure_7_Pack,262269,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_G_I_Joe_Classified_Series_Action_Figure_2_Pack_Snak,322804,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+Robocop Minix Figur Alex Murphy 12 cm,92.24,"https://yatta.pl/Robocop_Minix_Figur_Alex_Murphy_12_cm,286333,p",8436605115276,Robocop,Minix,StatusEnum.AVAILABLE,12 cm,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Persona_5_Royal_Pin_Badges_2_Pack_Skull_Ryui_Sakamoto,241541,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+Helluva Boss Plush Figure Fizzarolli Weighted Plush 40 cm,285.71,"https://yatta.pl/Preorder_Helluva_Boss_Plush_Figure_Fizzarolli_Weighted_Plush,282993,p",810163655692,Helluva Boss,Youtooz,StatusEnum.PREORDER,40 cm,StoreEnum.YATTA,,No character name
+Helluva Boss Plush Figure Goat Weighted Plush 40 cm,285.71,"https://yatta.pl/Preorder_Helluva_Boss_Plush_Figure_Goat_Weighted_Plush_40_cm,282992,p",810163655685,Helluva Boss,Youtooz,StatusEnum.PREORDER,40 cm,StoreEnum.YATTA,,No character name
+Neil Armstrong Action Figure 1/6 Neil Armstrong 30 cm,2201.62,"https://yatta.pl/Neil_Armstrong_Action_Figure_1_6_Neil_Armstrong_30_cm,265779,p",4897057881418,Neil Armstrong,Star Ace Toys,StatusEnum.AVAILABLE,1/6,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Jaws_3D_Poster_PVC_Figure_50th_Anniversary_26_cm,274740,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+Fallout Tubbz PVC Figure Vault Girl Boxed Edition 10 cm,115.57,"https://yatta.pl/Fallout_Tubbz_PVC_Figure_Vault_Girl_Boxed_Edition_10_cm,256500,p",5056280456827,Fallout,Numskull,StatusEnum.AVAILABLE,10 cm,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/The_Legend_of_Zelda_Majora_s_Mask_3D_PVC_Figure_Nendoroid_Li,305535,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/The_Witcher_Collectable_Coin_Toss_a_Coin_to_Your_Witcher_Lim,303614,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+SNK Metal Slug 4-in-1 Collector's Set 30th Anniversary,1123.44,"https://yatta.pl/Preorder_SNK_Metal_Slug_4_in_1_Collector_s_Set_30th_Annivers,317264,p",6971931752907,SNK Metal Slug,Robosen,StatusEnum.PREORDER,2 cm,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Five_Nights_at_Freddy_s_Collectable_Coin_One_Faz_Token_Limit,282962,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+Gremlins Figure Gizmo with 3D Glasses 15 cm,202.44,"https://yatta.pl/Gremlins_Figure_Gizmo_with_3D_Glasses_15_cm,231394,p",801269151416,Gremlins,Nemesis Now,StatusEnum.AVAILABLE,15 cm,StoreEnum.YATTA,,No character name
+Asterix Statue Asterix 30 cm,228.41,"https://yatta.pl/Asterix_Statue_Asterix_30_cm,255598,p",3521320400976,Asterix,Plastoy,StatusEnum.AVAILABLE,30 cm,StoreEnum.YATTA,,No character name
+Asterix Statue Dogmatix,271.76,"https://yatta.pl/Asterix_Statue_Dogmatix,255485,p",3521320400983,Asterix,Plastoy,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+Aterix Statue Paf! 27 cm,215.23,"https://yatta.pl/Aterix_Statue_Paf_27_cm,207356,p",3521320401003,Asterix,Plastoy,StatusEnum.AVAILABLE,27 cm,StoreEnum.YATTA,,No character name
+Demon Slayer: Kimetsu no Yaiba XXL Mousepad Muichiro Tokito 80 x 40 cm,140.38,"https://yatta.pl/Demon_Slayer_Kimetsu_no_Yaiba_XXL_Mousepad_Muichiro_Tokito_8,271631,p",8721126701436,Demon Slayer,Sakami Merchandise,StatusEnum.AVAILABLE,40 cm,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Nendoroid_Doll_Parts_for_Nendoroid_Doll_Figures_Mermaid_Set,266381,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Magic_The_Gathering_Collectable_Coin_Chandra,299457,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Magic_The_Gathering_Medallion_Tablet_of_the_Guilds,299464,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Zombie_Sailor_s_Toys_Action_Figures_2_Pack_Black_Ge,317190,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Harry_Potter_Parts_for_Nendoroid_Doll_Figures_Outfit_Set_Huf,213475,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Harry_Potter_Parts_for_Nendoroid_Doll_Figures_Outfit_Set_Sly,213477,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Frieren_Beyond_Journey_s_End_Ceramic_Mug_Frieren,296523,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Avatar_The_Last_Airbender_Collectable_Coin_Iroh_Limited_Edit,254830,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Silent_Hill_Collectable_Coin_3_Pack,261418,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Throne_Legacy_God_of_War_Series_Statue_1_3_Ragnarok,305837,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Throne_Legacy_God_of_War_Series_Statue_1_3_Ragnarok,305839,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+Dandadan 3D Pillow Turbo Granny 40 cm,161.85,"https://yatta.pl/Dandadan_3D_Pillow_Turbo_Granny_40_cm,286699,p",8721126701887,Dandadan,Sakami Merchandise,StatusEnum.AVAILABLE,40 cm,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Marsupilami_Mini_Figure_7_Pack_Characters_4_10_cm,255513,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Pok_mon_Battle_Figure_6_Pack,320431,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Squid_Game_Minix_Figure_Masked_Circle_Guard_12_cm,280027,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+PSH Disney: Disney S2 - 24PC PDQ,25.00,"https://yatta.pl/PSH_Disney_Disney_S2_24PC_PDQ,151603,p",889698276931,,,StatusEnum.UNAVAILABLE,,StoreEnum.YATTA,,No character name
+Kirby PVC Figure - Nendoroid Kirby Cafe Ver.,419.90,"https://yatta.pl/Kirby_PVC_Figure_Nendoroid_Kirby_Cafe_Ver,288554,p",,Kirby,Good Smile Company,StatusEnum.AVAILABLE,6 cm,StoreEnum.YATTA,,No character name
+Funko Pop! DC Bombshells Pen Toppers Wonder Woman,19.00,"https://yatta.pl/Funko_Pop_DC_Bombshells_Pen_Toppers_Wonder_Woman,151630,p",889698261562,,,StatusEnum.UNAVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Nendoroid_More_4_pack_Parts_for_Nendoroid_Figures_Dress_Up_C,203166,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+How to Train Your Dragon 3: Storm Fly 18 cm Plush,60.15,"https://yatta.pl/How_to_Train_Your_Dragon_3_Storm_Fly_18_cm_Plush,280989,p",8425611348815,How to Train Your Dragon,Play by Play,StatusEnum.AVAILABLE,18 cm,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Lucky_Luke_Mini_Figure_7_Pack_Characters_4_10_cm,130763,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/UFO_Robot_Grendizer_Statues_2_Pack_Spazer_Grendizer_Standing,261699,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Back_to_the_Future_Ingot_Sport_Almanac_Limited_Edition,234904,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Back_To_The_Future_Collectable_Coin_Hoverboard_Limi,289938,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Back_To_The_Future_Ingot_40th_Anniversary_Time_Circ,293496,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Back_to_the_Future_Ingot_Metal_Film_Strip_Collectib,317832,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Back_to_the_Future_Ingot_Stained_Glass_Style_Limite,317833,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Overwatch_Collectable_Coin_Factions_Limited_Edition,321564,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Overwatch_Medallion_Mercy_Limited_Edition,321588,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Asterix_Mini_Figure_7_Pack_Characters_4_10_cm,130762,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+The Cat in the Hat Tubbz Mini PVC Figure,55.65,"https://yatta.pl/Preorder_The_Cat_in_the_Hat_Tubbz_Mini_PVC_Figure,313450,p",5056280466888,The Cat in the Hat,Numskull,StatusEnum.PREORDER,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Bluey_Action_Figures_4_Pack,262002,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+Assassination Classroom Statue Koro Sensei 30 cm,1000.23,"https://yatta.pl/Assassination_Classroom_Statue_Koro_Sensei_30_cm,255496,p",3521320420059,Assassination Classroom,Taka Corp Studio,StatusEnum.AVAILABLE,30 cm,StoreEnum.YATTA,,No character name
+POP! Vinyl: Workaholics: Anders,55.00,"https://yatta.pl/POP_Vinyl_Workaholics_Anders,151640,p",889698140553,,,StatusEnum.UNAVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Jaws_Ingot_Metal_Film_Strip_Collectible_Limited_Edi,317834,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Jaws_Medallion_50th_Anniversary_Shark_Tooth,289953,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Star_Wars_Mini_Figures_4_Pack_Wave_1_6_5_cm,312579,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+Shrek Plush Figure Shrek Weighted Plush 40 cm,285.71,"https://yatta.pl/Preorder_Shrek_Plush_Figure_Shrek_Weighted_Plush_40_cm,271609,p",810163650925,Shrek,Youtooz,StatusEnum.PREORDER,40 cm,StoreEnum.YATTA,,No character name
+Bubsy Plush Figure Bubsy 22 cm,186.32,"https://yatta.pl/Bubsy_Plush_Figure_Bubsy_22_cm,316377,p",810190435069,Bubsy,Youtooz,StatusEnum.AVAILABLE,22 cm,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Game_of_Thrones_POP_Rides_Vinyl_Figure_Daenerys_Drogon_18_cm,81035,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Cardcaptor_Sakura_Clear_Card_Ceramic_Mug_Kero_chan,265380,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Game_of_Thrones_Statue_Bronze_Iron_Throne_36_cm,47288,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Game_of_Thrones_Life_Size_Statue_Tyron_Lannister_15,261697,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+Retort PVC Figure - Nendoroid Retort,279.90,"https://yatta.pl/Retort_PVC_Figure_Nendoroid_Retort,193079,p",,,Good Smile Company,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Prince_Statue_1_3_Super_Bowl_2007_Halftime_Show_63,231099,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+Baby Shark Mini figure Baby Shark 7 cm,34.12,"https://yatta.pl/Baby_Shark_Mini_figure_Baby_Shark_7_cm,287850,p",8412906902418,Baby Shark,Comansi,StatusEnum.AVAILABLE,7 cm,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Star_Wars_Battlefront_Black_Series_Action_Figure_2,322534,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+Jurassic Park Replica 1/1 Dennis Nedry License Plate,68.14,"https://yatta.pl/Jurassic_Park_Replica_1_1_Dennis_Nedry_License_Plate,204392,p",5060662467226,Jurassic Park,FaNaTtik,StatusEnum.AVAILABLE,1/1,StoreEnum.YATTA,,No character name
+Dark Source Action Figur APOC Series Bedrock Albus Standard Combat Type Mech 16 cm,310.02,"https://yatta.pl/Preorder_Dark_Source_Action_Figur_APOC_Series_Bedrock_Albus,300432,p",6927054402748,APOC,Joy Toy (CN),StatusEnum.PREORDER,16 cm,StoreEnum.YATTA,,No character name
+Dark Source Action Figur APOC Series Iron Vanguard Heavy Assault Mech 16 cm,310.02,"https://yatta.pl/Preorder_Dark_Source_Action_Figur_APOC_Series_Iron_Vanguard,300429,p",6927054402717,APOC,Joy Toy (CN),StatusEnum.PREORDER,16 cm,StoreEnum.YATTA,,No character name
+Dark Source Action Figur APOC Series Shadow MirageMulti-Dimensional Maneuver Battle Mech 16 cm,310.02,"https://yatta.pl/Preorder_Dark_Source_Action_Figur_APOC_Series_Shadow_MirageM,300428,p",6927054402700,APOC,Joy Toy (CN),StatusEnum.PREORDER,16 cm,StoreEnum.YATTA,,No character name
+Suikoden I PVC Figure - Nendoroid Hero,461.90,"https://yatta.pl/Suikoden_I_PVC_Figure_Nendoroid_Hero,299421,p",,Suikoden,Good Smile Company,StatusEnum.AVAILABLE,10 cm,StoreEnum.YATTA,I,Pydantic data validation error
+Star Trek TOS Model Kit 1/600 U.S.S. Enterprise NCC-1701 48 cm,296.06,"https://yatta.pl/Star_Trek_TOS_Model_Kit_1_600_U_S_S_Enterprise_NCC_1701_48_c,184634,p",4009803049915,Star Trek,Revell,StatusEnum.AVAILABLE,1/600,StoreEnum.YATTA,,No character name
+Grubbs Plush Figure Grubbs 22 cm,218.38,"https://yatta.pl/Preorder_Grubbs_Plush_Figure_Grubbs_22_cm,289567,p",810163657115,Grubbs,Youtooz,StatusEnum.PREORDER,22 cm,StoreEnum.YATTA,,No character name
+Toy Story POP! Disney Vinyl Figure 20th Anniversary Buzz Lightyear 9 cm,55.00,"https://yatta.pl/Toy_Story_POP_Disney_Vinyl_Figure_20th_Anniversary_Buzz_Ligh,105785,p",849803068769,Toy Story,Funko,StatusEnum.UNAVAILABLE,9 cm,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Red_Sonja_Throne_Legacy_Collection_Statue_Statue_1,301903,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+Hazbin Hotel Tubbz PVC Figure Charlie Morningstar Boxed Edition 10 cm,111.31,"https://yatta.pl/Hazbin_Hotel_Tubbz_PVC_Figure_Charlie_Morningstar_Boxed_Edit,315935,p",5056280465829,Hazbin Hotel,Numskull,StatusEnum.AVAILABLE,10 cm,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Skylanders_Plush_Figures_2_Pack_Valentine_s_Spyro_C,307404,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+Scott Pilgrim Plush Figure Scott Pilgrim 23 cm,221.16,"https://yatta.pl/Preorder_Scott_Pilgrim_Plush_Figure_Scott_Pilgrim_23_cm,285825,p",810163656279,Scott Pilgrim,Youtooz,StatusEnum.PREORDER,23 cm,StoreEnum.YATTA,,No character name
+Mini Royale Plush Figure Mini Royale 22 cm,218.38,"https://yatta.pl/Preorder_Mini_Royale_Plush_Figure_Mini_Royale_22_cm,289539,p",810163658792,Mini Royale,Youtooz,StatusEnum.PREORDER,22 cm,StoreEnum.YATTA,,No character name
+Coraline Vinyl Figure Coraline 11 cm,221.16,"https://yatta.pl/Preorder_Coraline_Vinyl_Figure_Coraline_11_cm,286008,p",810163653988,Coraline,Youtooz,StatusEnum.PREORDER,11 cm,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Starfield_Medallion_Starfield_Consellation_Limited,301524,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+POP! Vinyl: John Wick: John Wick,55.00,"https://yatta.pl/POP_Vinyl_John_Wick_John_Wick,157343,p",,,,StatusEnum.UNAVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Star_Wars_Episode_VI_Vintage_Collection_Action_Figu,317692,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Metal_Gear_Solid_2_Ingot_Raiden_24k_Gold_Plated_Lim,306318,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Metal_Gear_Solid_2_Ingot_Snake_24k_Gold_Plated_Limi,306319,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+Bomberman Plush Figure Bomberman 22 cm,221.16,"https://yatta.pl/Preorder_Bomberman_Plush_Figure_Bomberman_22_cm,283003,p",810163653933,Bomberman,Youtooz,StatusEnum.PREORDER,22 cm,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Lilo_Stitch_Ramen_Bowl_with_Chopsticks_Stitch_Aloha,304540,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_The_Hobbit_Art_Print_Map_of_the_Shire_74_x_54_cm,306524,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+Porco Rosso model kit with figure 1/72 Savoia S.21F Version 2 & Porco,212.46,"https://yatta.pl/Preorder_Porco_Rosso_model_kit_with_figure_1_72_Savoia_S_21F,298758,p",4536318601036,Studio Ghibli,Fine,StatusEnum.PREORDER,1/72,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Krampus_Prop_Replicas_3_Pack_Gingerbread_Men,305978,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+,,"https://yatta.pl/Preorder_Texas_Chainsaw_Massacre_Clothed_Action_Figure_Leath,301611,p",,,,StatusEnum.AVAILABLE,,StoreEnum.YATTA,,No character name
+Slayer 3D Vinyl Statue Show No Mercy Minotaur 22 cm,1321.08,"https://yatta.pl/Slayer_3D_Vinyl_Statue_Show_No_Mercy_Minotaur_22_cm,316374,p",785571596397,Slayer,Knucklebonz,StatusEnum.AVAILABLE,22 cm,StoreEnum.YATTA,,No character name
