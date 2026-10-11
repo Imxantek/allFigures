@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 import time
 current_dir = os.path.dirname(os.path.abspath(__file__))
-backend_dir = os.path.abspath(os.path.join(current_dir, '..', '..'))
+backend_dir = os.path.abspath(os.path.join(current_dir, '../..', '..'))
 if backend_dir not in sys.path:
     sys.path.append(backend_dir)
 
