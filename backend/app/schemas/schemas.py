@@ -15,6 +15,7 @@ class ScrapedOffer(BaseModel):
     scale: Optional[str] = None
     store: StoreEnum
     ch_name: str = Field(..., min_length=2)
+    imgs: set = []
 
 
 class Figure(BaseModel):

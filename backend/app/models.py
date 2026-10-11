@@ -8,15 +8,16 @@ class Figure(db.Model):
     __tablename__="figure"
     F_ID=db.Column(db.Integer,primary_key=True)
     C_ID=db.Column(db.Integer,db.ForeignKey('character.C_ID'),nullable=False)
-    name=db.Column(db.String(100),nullable=False)
-    code=db.Column(db.String(100))
-    manufacturer=db.Column(db.String(50))
+    name=db.Column(db.String(500),nullable=False)
+    code=db.Column(db.String(100), unique=True)
+    manufacturer=db.Column(db.String(100))
     scale=db.Column(db.String(20))
 
     offers=db.relationship('Offer',backref='figure',lazy='dynamic')
 
 class StoreEnum(enum.Enum):
     YATTA="yatta.pl"
+    DYSTRYKTZERO="dystryktzero.pl"
 
 class StatusEnum(enum.Enum):
     AVAILABLE="available"
@@ -30,9 +31,21 @@ class Offer(db.Model):
     F_ID=db.Column(db.Integer,db.ForeignKey('figure.F_ID'),nullable=False)
     link=db.Column(db.String(500),nullable=False, unique=True)
     store=db.Column(db.Enum(StoreEnum),nullable=False)
-    price=db.Column(db.Numeric(precision=10, scale=2), nullable=False)
+    price=db.Column(db.Numeric(precision=10, scale=2))
     status=db.Column(db.Enum(StatusEnum),nullable=False)
 
+    images=db.relationship('Image',backref='offer',lazy='dynamic')
+
+class Image(db.Model):
+    __tablename__="image"
+    I_ID=db.Column(db.Integer,primary_key=True)
+    O_ID=db.Column(db.Integer,db.ForeignKey('offer.O_ID', ondelete="CASCADE"),nullable=False)
+    path=db.Column(db.String(500),nullable=False, unique=True)
+    link=db.Column(db.String(500),nullable=False)
+
+    __table_args__ = (
+        UniqueConstraint('O_ID', 'link', name='uq_offer_image_link'),
+    )
 
 class Series(db.Model):
     __tablename__="series"

@@ -1,0 +1,22 @@
+patterns = [
+        r"(?:[Ff]igure)\s*[-]\s*([A-Z][a-zA-Z\s]+?)\s*\.",
+        r"SH Figuarts\s+([A-Z][a-zA-Z\s]+?)\s*\.",
+        r"[-]\s*([A-Z][a-zA-Z\s]+?)\s+[Ff]igure\s*\.",
+        r"Pop Vinyl Figure\s*[-]\s*([A-Z][a-zA-Z]+(?:\s[A-Z][a-zA-Z]+)?)",
+        r"(?:[:\-]\s*)?([A-Z][a-zA-Z]+(?:\s[A-Z][a-zA-Z]+)?)\s+is\s+here\b",
+        r"(?:[Ff]igure|[Kk]it|[Bb]ust|[Ss]tatue)(?:\s*[-–:])?\s+([A-Z][a-zA-Z\s]+?)\s+(?:1/\d+|\d+\s*cm)",
+        r"(?:[Ff]igure)\s*[-:]?\s+([A-Z][a-zA-Z\s]+)$",
+        r"(?:[Nn]endoroid|[Ff]igma)\s+([A-Z][a-zA-Z\-]+(?:\s[A-Z][a-zA-Z\-]+)?)",
+        r"(?:[Nn]endoroid|[Ff]igure|[Ss]tatue|[Ff]igma)\s+(?:of|is)\s+([A-Z][a-z]+(?:\s[A-Z][a-z]+)?)",
+        r"[Pp]resenting\s+([A-Z][a-z]+(?:\s[A-Z][a-z]+)?)",
+        r"[Cc]omes\s+a\s+.*?\s+of\s+([A-Z][a-z]+(?:\s[A-Z][a-z]+)?)",
+        r"[Cc]omes\s+([A-Z][a-z\-]+(?:\s[A-Z][a-z\-]+)?)",
+        r"([A-Z][a-z]+(?:\s[A-Z][a-z]+)?)\s+from\s+the",
+        r"([A-Z][a-z]+(?:\s[A-Z][a-z]+)?)\s+arrives",
+        r"[Oo]riginal\s+[Cc]haracter\s+([A-Z][a-z]+(?:\s[A-Z][a-z]+)?)",
+        r"[\"']?([A-Z][a-z\-]+(?:\s[A-Z][a-z\-]+)?)[\"']?\s+is\s+now\s+available",
+        r"(?:worn|used|wielded)\s+by\s+([A-Z][a-z\-]+(?:\s[A-Z][a-z\-]+)?)",
+        r"figure\s+of\s+(?:the\s+)?(?:[0-9a-zA-Z\-]+\s+)?([A-Z][a-z\-]+(?:\s[A-Z][a-z\-]+)?)",
+        r"illustration,\s*([A-Z][a-zA-Z\s]+?),\s*(?:comes\s+to\s+life|as\s+a)",
+        r"(?:[Ff]igure|1/\d+|[Kk]it|[Bb]ust)\s+([A-Z][a-zA-Z\s]+?)\s+\d+\s*cm"
+    ]
