@@ -11,3 +11,5 @@ thefuzz~=0.22.1
 customtkinter~=6.0.0
 CTkListbox~=1.5
 python-dotenv~=1.2.2
+visual-comparison
+rembg

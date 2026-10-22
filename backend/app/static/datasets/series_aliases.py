@@ -1,4 +1,47 @@
 SERIES_ALIASES = {
+    # gurren
+    "tengen toppa gurren lagann": "Gurren Lagann",
+    "gurren lagann": "Gurren Lagann",
+
+    "darkstalkers - nightwarriors - vampire savior": "Darkstalkers",
+    "Darkstalkers": "Darkstalkers",
+
+    "tales of ...": "Tales of ...",
+    "tales of arise": "Tales of ...",
+
+    "melancholy of suzumiya haruhi": "Melancholy of Suzumiya Haruhi",
+    "the melancholy of suzumiya haruhi": "Melancholy of Suzumiya Haruhi",
+
+    "shana (shakugan no shana)": "Shakugan no Shana",
+    "shakugan no shana": "Shakugan no Shana",
+
+    "nukitashi the animation": "Nukitashi",
+    "nukitashi": "Nukitashi",
+
+    # seven deadly sins
+    "the seven deadly sins (nanatsu no taizai)" : "Seven Deadly Sins",
+    "seven deadly sins": "Seven Deadly Sins",
+
+
+    "to love ru": "To Love-Ru",
+
+    "ssss.gridman": "Gridman Universe",
+    "gridman universe": "Gridman Universe",
+
+
+    "cyberpunk: edgerunners":"Cyberpunk 2077",
+
+    "avatar": "Avatar: The Last Airbender",
+    "avatar: the last airbender": "Avatar: The Last Airbender",
+
+    "lord of the rings": "Lord of the Rings",
+
+    "nier": "NieR:Automata",
+    "nier:automata": "NieR:Automata",
+    # mega man
+    "megaman": "Mega Man",
+    "mega man": "Mega Man",
+
     # Frieren
     "frieren": "Frieren: Beyond Journey's End",
     "frieren: beyond journey´s end": "Frieren: Beyond Journey's End",
@@ -25,9 +68,10 @@ SERIES_ALIASES = {
 
     # Honkai
     "honkai": "Honkai Impact 3rd",
+    "honkai impact": "Honkai Impact 3rd",
     "honkai impact 3rd": "Honkai Impact 3rd",
-    "honkai star rail": "Honkai: Star Rail",
-    "honkai: star rail": "Honkai: Star Rail",
+    "honkai star rail": "Honkai Impact 3rd",
+    "honkai: star rail": "Honkai Impact 3rd",
 
     # Uma Musume
     "umamusume": "Uma Musume Pretty Derby",
@@ -56,7 +100,7 @@ SERIES_ALIASES = {
     "fate": "Fate",
     "fate series": "Fate",
     "fate/stay night": "Fate",
-    "fate/grand order": "Fate/Grand Order",
+    "fate/grand order": "Fate",
 
     # The Witcher
     "witcher, the": "The Witcher",
@@ -64,9 +108,15 @@ SERIES_ALIASES = {
     "wiedźmin": "The Witcher",
 
     # The Hobbit
-    "hobbit, the": "The Hobbit",
-    "the hobbit": "The Hobbit",
+    "hobbit, the": "Lord of the Rings",
+    "the hobbit": "Lord of the Rings",
     "władca pierścieni & the hobbit": "Lord of the Rings",
+
+    "super sonico": "Super Sonico",
+    "nitro super sonico": "Super Sonico",
+
+    "atelier marie":"Atelier Series",
+    "atelier series": "Atelier Series",
 
     # One Punch Man
     "one punch man": "One Punch Man",
@@ -130,11 +180,14 @@ SERIES_ALIASES = {
     "kasane teto": "Vocaloid",
     "luo tianyi": "Vocaloid",
     "racing miku": "Vocaloid",
+    "vsinger": "Vocaloid",
 
     # === Marvel Universe ===
     "marvel": "Marvel",
     "x-men": "Marvel",
     "spider-man": "Marvel",
+
+    "boruto": "Naruto",
 
     # === DC Comics Universe ===
     "dc comics": "DC Comics",
@@ -253,7 +306,7 @@ SERIES_ALIASES = {
     "pokémon": "Pokemon",
     "baki": "Grappler baki",
     "no game no life": "No Game No Life",
-    "to love-ru": "To Love-Ru Darkness",
+    "to love-ru": "To Love-Ru",
     "pogromcy duchów": "Ghostbusters",
     "g.i. joe": "GI Joe",
     "reverse: 1999": "Reverse",

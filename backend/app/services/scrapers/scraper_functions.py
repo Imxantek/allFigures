@@ -7,8 +7,6 @@ import requests
 CURRENT_FILE = os.path.abspath(__file__)
 APP_DIR = os.path.abspath(os.path.join(CURRENT_FILE, "..", "..", ".."))
 
-print(f"[DEBUG PATH] APP_DIR wskazuje na: {APP_DIR}")
-
 from io import BytesIO
 from bs4 import BeautifulSoup
 from pydantic import ValidationError
@@ -115,28 +113,9 @@ def save_to_mysql(data: ScrapedOffer):
                 break
 
         if not char:
-            # get the "Original Character / Unknown" id
-            unknown_series = db.session.query(Series).filter_by(title="Original Character / Unknown").first()
-            unknown_s_id=unknown_series.S_ID if unknown_series else None
-
-            # if the scraped series is Unknown, and the character appears only in one series
-            # then assign it to the only series it is currently in
-            if series.title == "Original Character / Unknown" and len(existing_chars)==1:
-                char=existing_chars[0]
-            # if the character previously figured as an unknown series,
-            # and currently scraped series isnt unknown
-            elif unknown_s_id and series.title != "Original Character / Unknown":
-                # reassign all those from Unknown to currently scraped series
-                char_in_unknown=next((c for c in existing_chars if c.S_ID==unknown_s_id), None)
-                if char_in_unknown:
-                    char=char_in_unknown
-                    char.S_ID=series.S_ID
-
-            # if the character is new, simply add it
-            if not char:
-                char=Character(name=data.ch_name, S_ID=series.S_ID)
-                db.session.add(char)
-                db.session.flush()
+            char=Character(name=data.ch_name, S_ID=series.S_ID)
+            db.session.add(char)
+            db.session.flush()
 
     # now lets check the figs
     fig = None
@@ -182,7 +161,7 @@ def process_offer_images(o_id, img_links):
 
         # increase the counter, so the names wont be the same
         count+=1
-        local_filename=f"{o_id}_{count}.jpg"
+        local_filename=f"{o_id}_{count}.png"
         # run the downloader function
         path=download_figure_image(img_link, local_filename)
 
@@ -206,7 +185,7 @@ def download_figure_image(img_url, local_filename):
             try:
                 img=PILImage.open(BytesIO(response.content))
                 img=img.convert("RGB")
-                img.save(local_path, "JPEG", quality=90)
+                img.save(local_path, "PNG", quality=90)
                 print(f"Downloaded img {local_filename}")
                 return f"images/figures/{local_filename}"
             except UnidentifiedImageError:

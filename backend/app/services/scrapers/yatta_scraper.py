@@ -104,7 +104,7 @@ def extract(link: str):
         'scale': None,
         'store': StoreEnum.YATTA,
         'ch_name': None,
-        'imgs': set()
+        'imgs': []
     }
 
     # fig name assignment

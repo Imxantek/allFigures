@@ -142,6 +142,15 @@ URL_BLACKLIST ={
                 "https://yatta.pl/Transformers_Generations_Selects_Voyager_WFC_GS26_Artfire_Ni,208387,p",
                 "https://yatta.pl/Transformers_Generations_Power_of_the_Primes_Action_Figure_D,135676,p",
                 "https://yatta.pl/Dragon_Ball_Super_Dragon_Stars_Playset_World_Martial_Arts_To,288532,p",
+                "https://yatta.pl/Nendoroid_Doll_Nendoroid_More_Doll_Wig_One_Curl_Ash_Gray,277827,p",
+                "https://yatta.pl/The_Hobbit_Art_Print_Portrait_of_Gandalf_the_Grey_21_x_28_cm,206872,p",
+                "https://yatta.pl/Funko_Pop_DC_Bombshells_Pen_Toppers_Harley_Quinn,151631,p",
+                "https://yatta.pl/Funko_Collectible_Pen_With_Topper_Thor_Ragnarok_Hulk,152848,p",
+                "https://yatta.pl/One_Piece_Wind_Bell_Furin_Gum_Gum_Fruit_Luffy,279870,p",
+                "https://yatta.pl/Hatsune_Miku_Pin_Badge_Halloween_Limited_Edition_Hatsune_Mik,261637,p",
+                "https://yatta.pl/Hatsune_Miku_Playing_Cards_Miku_Styles,219452,p",
+                "https://yatta.pl/Sanrio_XXL_Mousepad_Kuromi_Kawaii,293172,p",
+                "https://yatta.pl/Sanrio_Tote_Bag_Hello_Kitty_Kimono,293163,p",
                 # "",
 
 
@@ -224,6 +233,7 @@ URL_BLACKLIST ={
                 "https://yatta.pl/Character_Vocal_Series_Look_Up_PVC_Figures_Hatsune_Miku_Meik,313652,p",
                 "https://yatta.pl/One_Piece_Dramatic_Memories_Ichibansho_PVC_Prize_Figure_Ace,315888,p",
                 "https://yatta.pl/One_Piece_WCF_Log_Stories_PVC_Prize_Figure_Monkey_D_Luffy_Ni,290715,p",
+                "https://yatta.pl/Touken_Ranbu_Hanamaru_Piyokuru_Mini_Figures_6_Cm_Assortment,156797,p",
                 # "",
 
 
@@ -236,13 +246,13 @@ URL_BLACKLIST ={
 
                 # ????????
                 "https://yatta.pl/Preorder_Spice_and_Wolf_Merchant_Meets_the_Wise_Wolf_PVC_Sta,289968,p?over18=1",
-                "ttps://yatta.pl/Preorder_Spice_and_Wolf_Merchant_Meets_the_Wise_Wolf_PVC_Sta,289968,p"
+                "https://yatta.pl/Preorder_Spice_and_Wolf_Merchant_Meets_the_Wise_Wolf_PVC_Sta,289968,p"
 }
 
 KW_BLACKLIST = {
                 "model kit accessory", "throne", "duvet", "bowl", "adventure island", "shower curtain", "card", "lotr replica", "snk robot metal",
                 "banknote", "coin", "map", "mask", "surprise piapro characters", "poster", "harry potter role play", "notebook", "foam sword",
-                "jewelry rack",
+                "jewelry rack", "crossbody", "wig", "portrait", "pen toppers", "wind-bell", "pin badge", "playing cards", "mousepad", "tote bag",
                 "medalion", "morpher", "ingot", "blanket", "megami device m.s.g.", "ceramic mug", "doom the dark ages replica",
                 "bath duck", "purse", "holotape", "keycard", "outfit set", "medallion", "-pack", "doom 2 replica", "nendoroid more", "support item",
                 "desk mat", "figure egg", "movie ticket", "upgrade ticket", "parts for nendoroid", "dungeons & dragons foam",
