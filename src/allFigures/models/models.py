@@ -53,6 +53,19 @@ class Series(db.Model):
     title=db.Column(db.String(100),nullable=False)
 
     characters=db.relationship('Character',backref='series',lazy='dynamic')
+    aliases=db.relationship('SeriesAlias', backref='series',lazy='dynamic', cascade="all, delete-orphan")
+
+class SeriesAlias(db.Model):
+    __tablename__="series_alias"
+    alias=db.Column(db.String(100),primary_key=True)
+    S_ID=db.Column(db.Integer,db.ForeignKey('series.S_ID'),nullable=False)
+
+class CharacterAlias(db.Model):
+    __tablename__ = "character_alias"
+    CA_ID = db.Column(db.Integer, primary_key=True)
+    alias = db.Column(db.String(100), nullable=False)
+    C_ID = db.Column(db.Integer, db.ForeignKey('character.C_ID'), nullable=False)
+    is_valid=db.Column(db.Boolean, default=False, nullable=False)
 
 class Character(db.Model):
     __tablename__="character"
@@ -60,6 +73,7 @@ class Character(db.Model):
     S_ID=db.Column(db.Integer,db.ForeignKey('series.S_ID'),nullable=False)
     name=db.Column(db.String(100),nullable=False)
 
+    aliases=db.relationship('CharacterAlias', backref='character',lazy='dynamic', cascade="all, delete-orphan")
     figures=db.relationship('Figure',backref='character',lazy='dynamic')
 
     __table_args__ = (

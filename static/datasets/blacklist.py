@@ -234,6 +234,12 @@ URL_BLACKLIST ={
                 "https://yatta.pl/One_Piece_Dramatic_Memories_Ichibansho_PVC_Prize_Figure_Ace,315888,p",
                 "https://yatta.pl/One_Piece_WCF_Log_Stories_PVC_Prize_Figure_Monkey_D_Luffy_Ni,290715,p",
                 "https://yatta.pl/Touken_Ranbu_Hanamaru_Piyokuru_Mini_Figures_6_Cm_Assortment,156797,p",
+                "https://yatta.pl/Preorder_Dragon_Ball_Desktop_Real_McCoy_PVC_Figure_Diorama_0,320280,p",
+                "https://yatta.pl/Dragon_Ball_PVC_Figure_Figuarts_ZERO_Son_Goku_mini_Supreme_K,300242,p",
+                "https://yatta.pl/Dragon_Ball_PVC_Figure_Figuarts_ZERO_Son_Goku_Bulma,291592,p",
+                "https://yatta.pl/Dragon_Ball_Super_Clearise_PVC_Prize_Figure_Son_Goku_Vegeta,313047,p",
+                "https://yatta.pl/Preorder_Demon_Slayer_Kimetsu_no_Yaiba_PVC_Figure_Tanjiro_Ka,321514,p",
+                "https://yatta.pl/Bleach_Pop_Vinyl_Figure_Rukia_with_Kon_Special_Edition,307947,p",
                 # "",
 
 

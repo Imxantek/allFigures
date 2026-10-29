@@ -3,6 +3,7 @@ import os
 import queue
 import requests
 import threading
+import itertools
 import webbrowser
 import urllib.parse
 import customtkinter
@@ -13,15 +14,13 @@ from CTkListbox import CTkListbox
 from customtkinter import CTkImage
 
 from sqlalchemy import or_, and_, func, true
-from sqlalchemy.orm.sync import update
 
-from backend.run import app as flask_app
+from run import app as flask_app
 from sqlalchemy.exc import IntegrityError
-from services.code_extractor import clean_for_fuzz
+from services.code_extractor import clean_for_fuzz, get_links, get_data, match
 from static.datasets.domain_noise import DOMAIN_NOISE
-from code_extractor import get_links, get_data, match
-from services.scrapers.scraper_functions import process_offer_images
-from app.models import db, Figure, Character, Series, Image as model_Image, Offer, StoreEnum, StatusEnum
+from scrapers.scraper_functions import process_offer_images
+from models.models import db, Figure, Character, Series, Image as model_Image, Offer, StoreEnum, StatusEnum
 
 # ext = external source
 
@@ -58,8 +57,9 @@ fig_ext_mockup={
 
 
 current_file_path = os.path.abspath(__file__)
-services_dir = os.path.dirname(current_file_path)
-app_dir = os.path.dirname(services_dir)
+ALLFIGURES_DIR = os.path.dirname(current_file_path)
+SRC_DIR = os.path.dirname(ALLFIGURES_DIR)
+app_dir = os.path.dirname(SRC_DIR)
 
 class NameComparisonScreen(customtkinter.CTkToplevel):
     def fetch_series(self, phrase):
@@ -205,7 +205,7 @@ class NameComparisonScreen(customtkinter.CTkToplevel):
 
                 char = db.session.query(Character).filter_by(S_ID=series.S_ID, name=final_name).first()
                 if not char:
-                    char=Character(S_ID=series.S_ID, name=final_name)
+                    char=Character(S_ID=series.S_ID, name=final_name, is_valid=True)
                     db.session.add(char)
                     db.session.flush()
                 figure = db.session.query(Figure).filter_by(F_ID=self.fig_db.get("F_ID")).first()
@@ -430,7 +430,10 @@ class ComparatorApp(customtkinter.CTk):
         search2 = f"site:dystryktzero.pl {fig_name}"
         links1=get_links(search1)
         links2=get_links(search2)
-        all_links=links2+links1
+        all_links=[
+            link for pair in itertools.zip_longest(links1, links2)
+            for link in pair if link is not None
+        ]
         if not links1 and not links2:
             print(f"No figures for {fig_name}")
             return None
@@ -989,5 +992,5 @@ class ComparatorApp(customtkinter.CTk):
 app=ComparatorApp()
 app.mainloop()
 
-# app=NameComparisonScreen(fig_db_mockup, fig_ext_mockup)
-# app.mainloop()
+# allFigures=NameComparisonScreen(fig_db_mockup, fig_ext_mockup)
+# allFigures.mainloop()

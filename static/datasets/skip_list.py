@@ -5,8 +5,8 @@ KW_SKIP={
          "Hunter x Hunter", "Final Fantasy XVI", "Final Fantasy VII", "Final Fantasy IX", "Chase Possible", "DXF The Grandline", "DFX The Grandline", "SHFiguarts",
          "Little Witch Academia", "Avatar The Last Airbender", "The Rising of the Shield Hero", "Rock Iconz", "The Last of Us", "Rainbow Six Siege", "Shoulder Rider",
          "The Transformers: The Movie Studio Series", "Re Zero Starting Life in Another World", "Starting Life in Another World", "Mystery Minis", "Cinderella Girls",
-         "Teenage Mutant Ninja Turtles Ninja", "Magical Creatures", "Star Trek Generations", "Legacy", "Dragon Ball Z", "Gears of War Reloaded", "Relax Time",
-         "Grand Order", "Stay Puft", "Jason and the Argonauts", "Print Portrait", "Ganbare Douki chan", "Bobble Head", "NIJISANJI EN", "Sunshine in the Mirror",
+         "Teenage Mutant Ninja Turtles Ninja", "Magical Creatures", "Star Trek Generations", "Legacy", "Dragon Ball Z", "Gears of War Reloaded", "Relax Time", "Atelier Ryza",
+         "Grand Order", "Stay Puft", "Jason and the Argonauts", "Print Portrait", "Ganbare Douki chan", "Bobble Head", "NIJISANJI EN", "Sunshine in the Mirror", "Celestial Vivi"
          "Real Elite Masterline", "The Transformers The Movie Studio Series", "Aoni Production", "Rise of the Beasts", "Goddess of Victory Nikke", "Star Wars Legendary",
          "Generation One", "Godzilla vs. Kong", "Godzilla x Kong", "Shiny Colors", "Kimetsu No Yaiba", "The Mandalorian & Grogu", "One Punch Man", "Yumemirize", "Swacchao",
          "Star Wars: Maul - Shadow Lord", "Star Wars: Ahsoka", "Jurassic World", "Fine", "Bust",  "L Size", "M Size", "S Size", "II", "Foam", "GigantiX", "Kyunties", "To Love-Ru Darkness"

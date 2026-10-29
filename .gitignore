@@ -218,4 +218,5 @@ __marimo__/
 .streamlit/secrets.toml
 
 # static images
-backend/app/static/images/figures/
+static/images/figures/
+src/allFigures/temp/

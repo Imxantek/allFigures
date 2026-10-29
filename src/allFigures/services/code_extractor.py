@@ -1,16 +1,21 @@
 import re
+import os
 import time
 import requests
 from ddgs import DDGS
 from ddgs.exceptions import DDGSException
-from pymysql import IntegrityError
 from requests import RequestException
 from thefuzz import fuzz
-from app.models import StatusEnum, StoreEnum, db, Character, Series, Offer, Figure, Image
+
+CURRENT_FILE = os.path.abspath(__file__)
+SERVICES_DIR = os.path.dirname(CURRENT_FILE)
+ALLFIGURES_DIR = os.path.dirname(SERVICES_DIR)
+
+from models.models import StatusEnum, StoreEnum, db, Character, Series, Offer, Figure, Image
 from scrapers.dystrykt_scraper import extract
-from backend.run import app
-from Image_comparator import compare
-from services.scrapers.scraper_functions import process_offer_images
+from run import app
+from services.Image_comparator import compare
+from scrapers.scraper_functions import process_offer_images
 from static.datasets.domain_noise import DOMAIN_NOISE
 from bs4 import BeautifulSoup
 
@@ -28,7 +33,7 @@ def get_links(search:str):
         try:
             with DDGS() as ddgs:
                 print("Extracting...")
-                raw_res=list(ddgs.text(search, max_results=3))
+                raw_res=list(ddgs.text(search, max_results=5))
                 if raw_res:
                     print("Success!!")
                     results = [res["href"] for res in raw_res if re.search(r"myfigurecollection\.\w+/item/\d+$", res["href"]) or ("https://www.dystryktzero.pl" in res["href"] and res["href"].endswith(".html"))]

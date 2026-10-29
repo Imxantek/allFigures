@@ -1,6 +1,5 @@
 import cv2
 import numpy as np
-from os import listdir
 import requests
 import csv
 from fake_useragent import UserAgent
@@ -22,7 +21,6 @@ def prepare_image(file_path):
         img = cv2.imdecode(image_array, cv2.IMREAD_COLOR)
 
     else:
-        file_path="../static/"+file_path
         img = cv2.imread(file_path, cv2.IMREAD_COLOR)
 
     if img is None:
@@ -31,15 +29,24 @@ def prepare_image(file_path):
     # convert image to grayscale
     bgr=img
     gray=cv2.cvtColor(bgr, cv2.COLOR_BGR2GRAY)
+    # to save the grayfile uncomment the line below
+    # cv2.imwrite("gray.png", gray)
+
+
     # threshold for binary image conversion
     # a binary image is an image consisting of 0s and 1s
     # i've set a threshold of (245-255) for my grayscale image
     # THRESH BINARY INV inverts the logic so that if our mask fits into the
     # threshold, the figure is ones and the background is zeros
     retval, mask = cv2.threshold(gray, 245, 255, cv2.THRESH_BINARY_INV)
+
+    # to save the mask uncomment this line
     # cv2.imwrite("mask.png", mask)
+
+
     # we are using find contours to locate a bounding box of an image
     contours, hierarchy=cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
     if not contours:
         return None, None
 
@@ -56,6 +63,10 @@ def prepare_image(file_path):
 
     crop_img = cv2.resize(crop_img, (300, 600))
     crop_mask = cv2.resize(crop_mask, (300, 600), interpolation=cv2.INTER_NEAREST)
+
+    # to save the crops uncomment the lines below
+    # cv2.imwrite("crop_mask.png", crop_mask)
+    # cv2.imwrite("crop_img.png", crop_img)
 
     return crop_img, crop_mask
 
@@ -81,8 +92,6 @@ def hist_score(img1, mask1, img2, mask2):
     return max(0.0, correl)
 
 def SIFT_score(img1, mask1, img2, mask2):
-
-
     # convert to grays
     gray1=cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
     gray2=cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
@@ -111,38 +120,89 @@ def SIFT_score(img1, mask1, img2, mask2):
             if fst.distance < 0.75*snd.distance:
                 successes.append(fst)
 
-    # successes=[match for match in matches if match.distance]
+
+    # to save the sift test matches as a file uncomment the lines below
+    # img_matches = cv2.drawMatches(
+    #     img1,
+    #     kp1,
+    #     img2,
+    #     kp2,
+    #     successes,
+    #     None,
+    #     flags=cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS,
+    # )
+    # cv2.imwrite("matches.png", img_matches)
+
 
     # calculate a score - a ratio of successes and all kp from 1 or 2 (smaller val)
     score=len(successes)/min(len(kp1), len(kp2))
     # for SIFT a score of 25-30% is a success hence we need to multiply the score *3
     return min(1.0, score*3)
 
+
+
+def compare_prepared(img1, mask1, targ, match_threshold=0.9, reject_threshold=0.2):
+    """
+    returns a tuple of:
+    is a match: bool, is the figure rejected:bool
+    """
+
+    img2, mask2 = prepare_image(targ)
+    # most likely an error
+    # the offer cant be confirmed to be a match
+    # but it also cant be rejected
+    if img1 is None or img2 is None:
+        return False, False
+
+    # calculate the score
+    hist_sc=hist_score(img1, mask1, img2, mask2)
+
+    # if the score is lower than reject_threshold,
+    # then it's not a match
+    # and also the figure can be rejected
+    if hist_sc<reject_threshold:
+        return False, True
+
+
+    # we know that score=(hist+sift)/2
+    # it also means that
+    # hist=2*score-sift
+    # match threshold is 0.9
+    # and the max possible score for sift is 1
+    # hence
+    # hist=(2*0.9)-1=0.8
+    # if the score is lower than match_threshold
+    # then we know it's not a match
+    # but we dont have any basis to reject this figure
+    if hist_sc<2*match_threshold-1:
+        return False, False
+
+    # calculate the sift
+    sift_sc=SIFT_score(img1, mask1, img2, mask2)
+
+    # only if the match threshold has been surpassed
+    # we can approve that the offer is a genuine match
+    # and the figure cant be rejected
+    if (sift_sc+hist_sc)/2>match_threshold:
+        return True, False
+    return False, False
+
+
+
+
 def compare(src, targ):
     img1, mask1 = prepare_image(src)
     img2, mask2 = prepare_image(targ)
     if img1 is None or img2 is None:
         return 0.0
-    sift=SIFT_score(img1, mask1, img2, mask2)
-    hist=hist_score(img1, mask1, img2, mask2)
-    return (sift+hist)/2
+    sift_sc=SIFT_score(img1, mask1, img2, mask2)
+    hist_sc=hist_score(img1, mask1, img2, mask2)
+    return (sift_sc+hist_sc)/2
 
 
 if __name__ == "__main__":
-    # test
-    path="../static/images/figures/"
-    imgs=listdir(path)
-    src=path+"4666_6.png"
-    matches=[]
-    with open("scores.csv","w") as csvfile:
-        for img in imgs:
-            if img.startswith("4666_"):
-                continue
-            targ=path+img
-            score=compare(src, targ)
-            print(f"Targ: {targ}, score: {score}")
-            csvfile.write(str(score))
-            if score > 0.9:
-                matches.append(targ)
-    print(matches)
-    # print(compare(src, targ))
+    src="../static/images/figures/4666_6.png"
+    target="../static/images/figures/6246_2.png"
+    crop1, mask1=prepare_image(src)
+    crop2, mask2=prepare_image(target)
+    SIFT_score(crop1, mask1, crop2, mask2)
