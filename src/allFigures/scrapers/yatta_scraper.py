@@ -1,25 +1,26 @@
 import os
 import re
 import time
+import spacy
 import requests
+
+from scrapers.scraper_functions import (init_cache_from_db, add_to_cache, get_name_from_mfc,
+                               get_name_from_cache,process_scraped_data)
 
 CURRENT_FILE = os.path.abspath(__file__)
 SCRAPERS_DIR = os.path.dirname(CURRENT_FILE)
-SERVICES_DIR = os.path.dirname(SCRAPERS_DIR)
-APP_DIR = os.path.dirname(SERVICES_DIR)
+ALLFIGURES_DIR = os.path.dirname(SCRAPERS_DIR)
+SRC_DIR = os.path.dirname(ALLFIGURES_DIR)
 
 from typing import Any
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 from requests import RequestException
-from app.models import StatusEnum, StoreEnum
+from models.models import StatusEnum, StoreEnum
 from decimal import Decimal, InvalidOperation
-from app.static.datasets.regex_patterns import patterns
-from app.static.datasets.skip_list import MASTER_SKIP_PATTERN
-from app.static.datasets.series_aliases import SERIES_ALIASES
-from app.static.datasets.blacklist import URL_BLACKLIST, KW_BLACKLIST
-from app.services.scrapers.scraper_functions import (init_cache_from_db, add_to_cache, get_name_from_mfc,
-                               get_name_from_cache,process_scraped_data)
+from static.datasets.regex_patterns import patterns
+from static.datasets.skip_list import MASTER_SKIP_PATTERN
+from static.datasets.blacklist import URL_BLACKLIST, KW_BLACKLIST
 
 
 ua=UserAgent()
@@ -50,16 +51,12 @@ def scrape_yatta(url="https://yatta.pl/Figurki,4,s"):
         max_a=0
 
 
-    for pg in range(1, max_a):
+    for pg in range(1, max_a+1):
         time.sleep(1)
         print(f"Extracting page {pg}")
         full_link=f"{url}?A={pg}&B=80"
+        extract_page(full_link)
 
-        if resp.ok:
-            print("response ok!")
-            extract_page(full_link)
-        else:
-            print(f"HTTP error: {resp.status_code}, at pg: {pg}")
 
 def extract_page(link):
     resp=requests.get(link, headers=headers, timeout=30)
@@ -149,9 +146,6 @@ def extract(link: str):
         series_tag = series_node.find_next_sibling("a")
         if series_tag:
             series_name = series_tag.text.strip()
-            series_name_lower = series_name.lower()
-            if series_name_lower in SERIES_ALIASES:
-                series_name = SERIES_ALIASES[series_name_lower]
             res['series_title']=series_name
     
     # manufacturer assignment
@@ -165,9 +159,10 @@ def extract(link: str):
 
     # status assignment
     status=StatusEnum.AVAILABLE
-    if "Preorder" in fig_name:
+    if "Preorder:" in fig_name:
         status=StatusEnum.PREORDER
-        res['fig_name']=fig_name.replace("Preorder:", "").strip()
+        fig_name=fig_name.replace("Preorder:", "").strip()
+        res['fig_name']=fig_name
     else:
         unav=soup.find(string=re.compile("brak towaru"))
         if unav:
@@ -183,53 +178,55 @@ def extract(link: str):
     if carousel_tag:
         imgs = carousel_tag.find_all("img", {"src": True})
         srces = ["https:"+img['src'] for img in imgs if "size300" in img['src']]
-        res['imgs']=set(srces)
+        res['imgs']=list(dict.fromkeys(srces))
 
     
     # extraction of character name from cache 
     code=res.get("code")
-    name=""
-    scale=""
     series_title=res.get("series_title", "")
     desc = soup.find("div", itemprop="description")
     desc_text = desc.get_text(separator='\n', strip=True).replace('\xa0', ' ') if desc else ""
-
-    name, is_fallback=get_name_from_cache(fig_name, series_title)
-    if name and not is_fallback:
-        print("found name locally")
 
     # search the desc for scale
     match = re.search(r"1/\d+", fig_name + ' ' + desc_text)
     if not match:
         match = re.search(r'\d+\s*cm', fig_name + ' ' + desc_text, re.IGNORECASE)
     scale = match.group(0) if match else ""
-    
+
+    fig_strp = fig_name
+    if res.get("series_title"):
+        fig_strp = fig_strp.replace(res.get("series_title"), "").strip()
+    if res.get("manufacturer"):
+        fig_strp = fig_strp.replace(res.get("manufacturer"), "").strip()
+    fig_strp = re.sub(r'[^a-zA-Z0-9/\-() ]', "", fig_strp).strip()
+
+    name, is_fallback=get_name_from_cache(fig_name, series_title)
+    if name and not is_fallback:
+        print("found name locally")
+
     # search MFC for name
     if code and (not name or not scale or is_fallback):
         mfc_char, mfc_scale=get_name_from_mfc(code)
-        if not name and mfc_char:
+        if (not name or is_fallback) and mfc_char:
             name=mfc_char
             is_fallback=False
         if not scale and mfc_scale:
             scale=mfc_scale
 
     # search the description for character name
-    if not name or is_fallback:
-        # clear the fig name, removing the title and manufacturer
-        fig_strp=fig_name
-        if res.get("series_title"):
-            fig_strp=fig_strp.replace(res.get("series_title"),"").strip()
-        if res.get("manufacturer"):
-            fig_strp=fig_strp.replace(res.get("manufacturer"),"").strip()
-        
-        fig_strp=re.sub(r'[^a-zA-Z0-9/\-() ]', "", fig_strp).strip()
-        
-        if fig_strp and desc_text:
+    # clear the fig name, removing the title and manufacturer
+    if (not name or is_fallback) and fig_strp and desc_text:
             desc_name, desc_is_fallback=get_name_from_desc(fig_strp, desc_text, series_title)
-            if desc_name and not desc_is_fallback:
-                name=desc_name
-            elif desc_name and desc_is_fallback and not name:
-                name=desc_name
+            if desc_name:
+                cached_desc_name, cached_fallback = get_name_from_cache(desc_name, series_title)
+                if cached_desc_name and not cached_fallback:
+                    name = cached_desc_name
+                    is_fallback = False
+                elif not desc_is_fallback:
+                    name = desc_name
+                    is_fallback = False
+                elif not name:
+                    name = desc_name
     
     res["scale"] = scale
     
@@ -239,7 +236,6 @@ def extract(link: str):
         return res
     else:
         res["ch_name"]=name
-        add_to_cache(name, res.get("series_title", ""))
 
     return res
 

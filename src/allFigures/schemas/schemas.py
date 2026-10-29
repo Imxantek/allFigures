@@ -2,7 +2,7 @@ from pydantic import BaseModel, Field, field_validator, HttpUrl
 import validators
 from typing import Optional
 from decimal import Decimal
-from ..models import StoreEnum, StatusEnum
+from models.models import StoreEnum, StatusEnum
 
 class ScrapedOffer(BaseModel):
     fig_name: str = Field(..., min_length=3)
