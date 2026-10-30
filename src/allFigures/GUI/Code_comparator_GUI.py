@@ -375,7 +375,7 @@ class NameComparisonScreen(customtkinter.CTkToplevel):
         self.char_search_var.set(self.sel_name_text.get("0.0", "end").strip())
         self.series_search_var.set(self.sel_series_text.get("0.0", "end").strip())
 
-class ComparatorApp(customtkinter.CTk):
+class CodeApp(customtkinter.CTkToplevel):
 
     def open_url(self, url):
         webbrowser.open_new(url)
@@ -531,6 +531,10 @@ class ComparatorApp(customtkinter.CTk):
             self.error_label.configure(text="Error! Queue is empty", text_color="red")
         self.load_next_figure_to_gui()
 
+    def _exit_button_callback(self):
+        self.main_window.deiconify()
+        self.withdraw()
+
 
     def prev_img_callback(self):
         if not self.image_list:
@@ -611,7 +615,7 @@ class ComparatorApp(customtkinter.CTk):
         self.after(100, self.check_queue)
 
     def worker_get_data(self):
-        while True:
+        while self.winfo_exists():
             fig_db=self.fetch_data_from_db()
             if not fig_db:
                 self.data_queue.put({"db": None, "ext": None})
@@ -652,12 +656,14 @@ class ComparatorApp(customtkinter.CTk):
         self.ext_load_more_button.configure(state="disabled", text="Loading...")
         threading.Thread(target=self.worker_load_more, daemon=True).start()
 
-    def worker_load_more(self):
-        new_link=self.pending_links.pop(0)
-        new_data=get_data([new_link])
 
-        new_data=match(new_data, self.target_fuzz)
-        self.after(0, self.append_new_ext_data, new_data)
+    def worker_load_more(self):
+        while self.winfo_exists():
+            new_link=self.pending_links.pop(0)
+            new_data=get_data([new_link])
+
+            new_data=match(new_data, self.target_fuzz)
+            self.after(0, self.append_new_ext_data, new_data)
 
     def append_new_ext_data(self, new_data):
         self.figures_from_ext.update(new_data)
@@ -799,9 +805,9 @@ class ComparatorApp(customtkinter.CTk):
             self.ext_listbox.insert("end", f"{value.get('score', 0)}: {key}")
 
 
-    def __init__(self):
+    def __init__(self, main_window):
         super().__init__()
-
+        self.main_window=main_window
         self.fig_db=None
         self.fig_ext=None
 
@@ -969,11 +975,12 @@ class ComparatorApp(customtkinter.CTk):
 
 
 
-        self.bottom_frame.grid(row=1, column=0, columnspan=2, padx=10, pady=10, sticky="ew")
+        self.bottom_frame.grid(row=1, column=0, columnspan=3, padx=10, pady=10, sticky="ew")
         self.button_frame.pack(side="bottom")
 
         self.button_frame.grid_columnconfigure(0, weight=1)
         self.button_frame.grid_columnconfigure(1, weight=1)
+        self.button_frame.grid_columnconfigure(2, weight=1)
 
         self.error_label = customtkinter.CTkLabel(self.bottom_frame)
         self.error_label.pack(pady=10, padx=10)
@@ -982,15 +989,19 @@ class ComparatorApp(customtkinter.CTk):
         self.confirm_button = customtkinter.CTkButton(self.button_frame, text="Confirm", command=self.confirm_callback, fg_color="green")
         self.confirm_button.grid(row=0, column=0, padx=20, pady=20, sticky="e")
 
-        self.reject_button = customtkinter.CTkButton(self.button_frame, text="Reject", command=self.reject_callback, fg_color="red")
-        self.reject_button.grid(row=0, column=1, padx=20, pady=20, sticky="w")
+        self.reject_button = customtkinter.CTkButton(self.button_frame, text="Reject", command=self.reject_callback, fg_color="yellow")
+        self.reject_button.grid(row=0, column=1, padx=20, pady=20)
+
+        exit_button = customtkinter.CTkButton(self.button_frame, text="Exit", command=self._exit_button_callback, fg_color="red")
+        exit_button.grid(row=0, column=2, padx=20, pady=20, sticky="w")
 
         threading.Thread(target=self.worker_get_data, daemon=True).start()
 
         self.load_next_figure_to_gui()
+        self.protocol("WM_DELETE_WINDOW", self._exit_button_callback)
 
-app=ComparatorApp()
-app.mainloop()
+# app=ComparatorApp()
+# app.mainloop()
 
 # allFigures=NameComparisonScreen(fig_db_mockup, fig_ext_mockup)
 # allFigures.mainloop()

@@ -65,15 +65,16 @@ class CharacterAlias(db.Model):
     CA_ID = db.Column(db.Integer, primary_key=True)
     alias = db.Column(db.String(100), nullable=False)
     C_ID = db.Column(db.Integer, db.ForeignKey('character.C_ID'), nullable=False)
-    is_valid=db.Column(db.Boolean, default=False, nullable=False)
+
 
 class Character(db.Model):
     __tablename__="character"
     C_ID=db.Column(db.Integer,primary_key=True)
     S_ID=db.Column(db.Integer,db.ForeignKey('series.S_ID'),nullable=False)
     name=db.Column(db.String(100),nullable=False)
+    is_valid = db.Column(db.Boolean, default=False, nullable=False)
 
-    aliases=db.relationship('CharacterAlias', backref='character',lazy='dynamic', cascade="all, delete-orphan")
+    aliases=db.relationship('CharacterAlias', backref='character',lazy='selectin', cascade="all, delete-orphan")
     figures=db.relationship('Figure',backref='character',lazy='dynamic')
 
     __table_args__ = (

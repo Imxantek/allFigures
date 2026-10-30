@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 import requests
 import re
 from requests import RequestException
-
+from scrapers.scraper_functions import KNOWN_CHARACTERS_CACHE
 from models.models import Figure, StatusEnum, StoreEnum, db
 from scrapers.scraper_functions import process_scraped_data, get_name_from_cache, init_cache_from_db, get_name_from_mfc
 from static.datasets.blacklist import URL_BLACKLIST
@@ -168,10 +168,13 @@ def extract(url):
         char_value_tag = hero_label_tag.find_next("div", class_="ty-product-feature__value")
         if char_value_tag:
             char_name_li = char_value_tag.find_all("li", class_="ty-product-feature__multiple-item")
-            if len(char_name_li)>1:
+            if len(char_name_li) > 1:
                 return None
-            ch_name = char_name_li[0].get_text().strip()
-            res["ch_name"] = ch_name
+            raw_ch_name = char_name_li[0].get_text().strip()
+            cached_name, _ = get_name_from_cache(raw_ch_name, res.get("series_title"))
+
+            res["ch_name"] = cached_name if cached_name else raw_ch_name
+
             if res['ch_name'] not in res["fig_name"]:
                 is_fallback = True
 
