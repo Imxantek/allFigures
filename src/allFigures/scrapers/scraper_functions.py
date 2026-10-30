@@ -1,3 +1,4 @@
+import datetime
 import re
 import os
 import csv
@@ -258,7 +259,7 @@ def save_to_mysql(data: ScrapedOffer):
         if imgs:
             # scrapped image
             temp_path=os.path.join(APP_DIR, "static", "images", "figures", "TEMP.png")
-            for scr_img in list(data.imgs)[:3]:
+            for scr_img in list(data.imgs)[:6]:
                 temp_img=download_figure_image(scr_img, "TEMP.png")
                 if not temp_img:
                     continue
@@ -482,7 +483,8 @@ def get_name_from_cache(fig_name: str, series_title:str =""):
 
 
 
-def save_failures_to_csv(failed_offer: dict, filename="rejects.csv"):
+def save_failures_to_csv(failed_offer: dict):
+    filename = f"rejects-{datetime.datetime.now().strftime('%Y%m%d-%H%M%S')}.csv"
     with open(filename, 'a', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         writer.writerow(failed_offer.values())
