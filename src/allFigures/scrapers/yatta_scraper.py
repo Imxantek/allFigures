@@ -1,7 +1,6 @@
 import os
 import re
 import time
-import spacy
 import requests
 
 from scrapers.scraper_functions import (init_cache_from_db, add_to_cache, get_name_from_mfc,
