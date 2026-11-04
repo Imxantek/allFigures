@@ -6,7 +6,7 @@ import time
 import requests
 from sqlalchemy import func
 from sqlalchemy.orm import joinedload
-from sympy.plotting.textplot import is_valid
+
 
 from services.Image_comparator import compare, compare_prepared, prepare_image
 

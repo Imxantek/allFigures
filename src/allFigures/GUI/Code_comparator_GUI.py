@@ -57,9 +57,10 @@ fig_ext_mockup={
 
 
 current_file_path = os.path.abspath(__file__)
-ALLFIGURES_DIR = os.path.dirname(current_file_path)
+GUI_DIR=os.path.dirname(current_file_path)
+ALLFIGURES_DIR = os.path.dirname(GUI_DIR)
 SRC_DIR = os.path.dirname(ALLFIGURES_DIR)
-app_dir = os.path.dirname(SRC_DIR)
+APP_DIR = os.path.dirname(SRC_DIR)
 
 class NameComparisonScreen(customtkinter.CTkToplevel):
     def fetch_series(self, phrase):
@@ -541,7 +542,7 @@ class CodeApp(customtkinter.CTkToplevel):
             return
         self.image_list=self.image_list[-1:]+self.image_list[:-1]
 
-        new_path=os.path.join(app_dir, "static", self.image_list[0])
+        new_path=os.path.join(APP_DIR, "static", self.image_list[0])
         new_pil_image=Image.open(new_path)
         new_ctk_image=customtkinter.CTkImage(new_pil_image, size=(200,300))
         self.image_db_label.configure(image=new_ctk_image)
@@ -552,7 +553,7 @@ class CodeApp(customtkinter.CTkToplevel):
             return
         self.image_list = self.image_list[1:] + self.image_list[:1]
 
-        new_path = os.path.normpath(os.path.join(app_dir, "static", self.image_list[0]))
+        new_path = os.path.normpath(os.path.join(APP_DIR, "static", self.image_list[0]))
         new_pil_image = Image.open(new_path)
         new_ctk_image = customtkinter.CTkImage(new_pil_image, size=(200, 300))
         self.image_db_label.configure(image=new_ctk_image)
@@ -729,7 +730,7 @@ class CodeApp(customtkinter.CTkToplevel):
 
         if self.image_list:
             main_image = self.image_list[0]
-            full_path = os.path.normpath(os.path.join(app_dir, "static", main_image))
+            full_path = os.path.normpath(os.path.join(APP_DIR, "static", main_image))
             try:
                 pil_db_image=Image.open(full_path)
             except FileNotFoundError:
@@ -989,7 +990,7 @@ class CodeApp(customtkinter.CTkToplevel):
         self.confirm_button = customtkinter.CTkButton(self.button_frame, text="Confirm", command=self.confirm_callback, fg_color="green")
         self.confirm_button.grid(row=0, column=0, padx=20, pady=20, sticky="e")
 
-        self.reject_button = customtkinter.CTkButton(self.button_frame, text="Reject", command=self.reject_callback, fg_color="yellow")
+        self.reject_button = customtkinter.CTkButton(self.button_frame, text="Reject", command=self.reject_callback, fg_color="yellow", text_color="black")
         self.reject_button.grid(row=0, column=1, padx=20, pady=20)
 
         exit_button = customtkinter.CTkButton(self.button_frame, text="Exit", command=self._exit_button_callback, fg_color="red")
