@@ -11,7 +11,7 @@ from scrapers.scraper_functions import KNOWN_CHARACTERS_CACHE
 from models.models import Figure, StatusEnum, StoreEnum, db
 from scrapers.scraper_functions import process_scraped_data, get_name_from_cache, init_cache_from_db, get_name_from_mfc
 from static.datasets.blacklist import URL_BLACKLIST
-
+from static.datasets.skip_list import SKIPPED_SERIES
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
@@ -112,17 +112,9 @@ def extract(url):
         if series_value_tags:
             series_tags = series_value_tags.find_all("li", {"class": "ty-product-feature__multiple-item"})
             if series_tags:
-                # on dystryktzero, often times a figure has more than one series assigned,
-                # usually the mos specific and accurate one is last
-                res["series_title"] = series_tags[-1].get_text().strip()
-                # if len(series_tags)>1:
-                #     for series_tag in series_tags:
-                #         if "Anime / Manga" not in series_tag.get_text():
-                #             series = series_tag.get_text().strip()
-                #             res["series_title"] = series
-                # else:
-                #     series = series_tags[0].get_text().strip()
-                #     res["series_title"] = series
+                series_clear=[x for x in series_tags if x not in SKIPPED_SERIES]
+                res["series_title"] = series_clear[-1].get_text().strip()
+
 
     # get status
     status_tag = soup.find("div", id="ss_product_available")

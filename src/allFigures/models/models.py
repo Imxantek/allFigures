@@ -52,7 +52,7 @@ class Series(db.Model):
     S_ID=db.Column(db.Integer,primary_key=True)
     title=db.Column(db.String(100),nullable=False)
 
-    characters=db.relationship('Character',backref='series',lazy='dynamic')
+    characters=db.relationship('Character',backref='series',lazy='selectin')
     aliases=db.relationship('SeriesAlias', backref='series',lazy='dynamic', cascade="all, delete-orphan")
 
 class SeriesAlias(db.Model):
