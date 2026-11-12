@@ -26,6 +26,11 @@ KW_SKIP={
          "Kadokawa", "Merchant", "Meets", "Collectoys", "StarCraft", "Autobot", "Battle", "Studio Terrorcon", "Studio", "Smash Changers", "The Last Knight", "War for Cybertron",
          "MDLX", "Lane", "Ichibansho", "GT", "Legends", "Artcanvas", "Daima", "Evangelion", "Cutie1", "Wano", "Refresh", "ZERO", "HLB", "Baseball", "AAA", "Anime"
 }
+SKIPPED_SERIES={
+   "superbohaterowie", "animacje", "anime / manga", "fantasy", "film / tv - pozostałe"
+   "geek", "gry - pozostałe", "horror", "kaijū", "komiksy - pozostałe", "mecha", "muzyka", "sport"
+}
+
 sorted_skips=sorted(KW_SKIP, key=len, reverse=True)
 escaped_skips=[re.escape(skip) for skip in sorted_skips]
 MASTER_SKIP_PATTERN = re.compile(rf"\b(?:{'|'.join(escaped_skips)})\b", re.IGNORECASE)
