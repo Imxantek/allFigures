@@ -13,7 +13,7 @@ class Figure(db.Model):
     manufacturer=db.Column(db.String(100))
     scale=db.Column(db.String(20))
 
-    offers=db.relationship('Offer',backref='figure',lazy='dynamic')
+    offers=db.relationship('Offer',backref='figure', lazy='selectin')
 
 class StoreEnum(enum.Enum):
     YATTA="yatta.pl"
@@ -33,6 +33,10 @@ class Offer(db.Model):
     store=db.Column(db.Enum(StoreEnum),nullable=False)
     price=db.Column(db.Numeric(precision=10, scale=2))
     status=db.Column(db.Enum(StatusEnum),nullable=False)
+    title=db.Column(db.String(500))
+    description=db.Column(db.String(1000))
+    __table_args__ = ()
+
 
     images=db.relationship('Image',backref='offer',lazy='dynamic')
 
@@ -53,7 +57,7 @@ class Series(db.Model):
     title=db.Column(db.String(100),nullable=False)
 
     characters=db.relationship('Character',backref='series',lazy='selectin')
-    aliases=db.relationship('SeriesAlias', backref='series',lazy='dynamic', cascade="all, delete-orphan")
+    aliases=db.relationship('SeriesAlias', backref='series',lazy='selectin', cascade="all, delete-orphan")
 
 class SeriesAlias(db.Model):
     __tablename__="series_alias"
@@ -75,7 +79,7 @@ class Character(db.Model):
     is_valid = db.Column(db.Boolean, default=False, nullable=False)
 
     aliases=db.relationship('CharacterAlias', backref='character',lazy='selectin', cascade="all, delete-orphan")
-    figures=db.relationship('Figure',backref='character',lazy='dynamic')
+    figures=db.relationship('Figure',backref='character',lazy='selectin')
 
     __table_args__ = (
         UniqueConstraint('name', 'S_ID', name='unique_character_per_series'),

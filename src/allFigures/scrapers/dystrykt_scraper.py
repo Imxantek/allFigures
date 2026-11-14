@@ -26,8 +26,7 @@ def scrape_dystrykt(url="https://www.dystryktzero.pl/statuetki/"):
     extract_page(full_link)
     soup = BeautifulSoup(resp.content, "html.parser")
     last_page_idx=soup.find("a", {"data-ca-scroll": ".cm-pagination-container", "class":"cm-history ty-pagination__item hidden-phone ty-pagination__range cm-ajax"}).get_text().split("-")[1].strip()
-    # for i in range(2, int(last_page_idx)+1):
-    for i in range(2,3):
+    for i in range(2, int(last_page_idx)+1):
         uri=f"page-{i}/?items_per_page=192"
         full_link=url+uri
         extract_page(full_link)
@@ -75,7 +74,9 @@ def extract(url):
         'scale': None,
         'store': StoreEnum.DYSTRYKTZERO,
         'ch_name': None,
-        'imgs': []
+        'imgs': [],
+        'title': None,
+        'description': None,
     }
 
     soup = BeautifulSoup(resp.content, "html.parser")
@@ -89,6 +90,7 @@ def extract(url):
     fig_name = fig_name_tag.get_text().strip()
     # print(f"extracted fig_name: {fig_name}")
     res["fig_name"] = fig_name
+    res["title"] = fig_name
 
     # get code
     code_tag = soup.find("span", class_="ty-control-group__item")
@@ -112,9 +114,9 @@ def extract(url):
         if series_value_tags:
             series_tags = series_value_tags.find_all("li", {"class": "ty-product-feature__multiple-item"})
             if series_tags:
-                series_clear=[x for x in series_tags if x not in SKIPPED_SERIES]
-                res["series_title"] = series_clear[-1].get_text().strip()
-
+                series_clear=[x for x in series_tags if x.get_text().strip().lower() not in SKIPPED_SERIES]
+                if len(series_clear)>0:
+                    res["series_title"] = series_clear[-1].get_text().strip()
 
     # get status
     status_tag = soup.find("div", id="ss_product_available")
@@ -174,6 +176,8 @@ def extract(url):
         # get desc
         desc_tag=soup.find("div", id="content_description")
         if desc_tag:
+            desc_text = desc_tag.get_text(separator='\n', strip=True).replace('\xa0', ' ')
+            res["description"] = desc_text
             strongs=desc_tag.find_all("strong")
             if strongs:
                 strong=strongs[0].get_text()

@@ -1,4 +1,5 @@
 import queue
+import re
 import threading
 from io import BytesIO
 
@@ -43,7 +44,8 @@ class CharacterApp(customtkinter.CTk):
     def _download_images(self, character):
         target_dir=os.path.join(os.getcwd(), "temp")
         os.makedirs(target_dir, exist_ok=True)
-        file_path=os.path.join(target_dir, f"{character.name} - {character.S_ID}.png")
+        char_name = re.sub(r'[\\/*?:"<>|\r\n]+', '_', character.name).strip()
+        file_path=os.path.join(target_dir, f"{char_name} - {character.S_ID}.png")
         if os.path.exists(file_path):
             print("image exists. skipping")
             return
@@ -80,7 +82,7 @@ class CharacterApp(customtkinter.CTk):
         with flask_app.app_context():
             query=db.session.query(Series)\
             .filter(and_(Series.title.ilike(f"%{phrase}%"),
-            Series.title.not_like(f"%{self.original_character.title}%"))).limit(25).all()
+            Series.title.not_like(f"%{self.original_character.series.title}%"))).limit(25).all()
         return query
 
     def _confirm_char_choice(self, char):
@@ -186,8 +188,9 @@ class CharacterApp(customtkinter.CTk):
             self.chars_from_series = list(new_companions)
 
             temp_dir = os.path.join(os.getcwd(), "temp")
-            old_img_path = os.path.join(temp_dir, f"{self.original_character.name}_{old_s_id}.png")
-            new_img_path = os.path.join(temp_dir, f"{self.original_character.name}_{new_s_id}.png")
+            char_name=re.sub(r'[\\/*?:"<>|\r\n]+', '_', self.original_character.name).strip()
+            old_img_path = os.path.join(temp_dir, f"{char_name}_{old_s_id}.png")
+            new_img_path = os.path.join(temp_dir, f"{char_name}_{new_s_id}.png")
             if os.path.exists(old_img_path):
                 os.rename(old_img_path, new_img_path)
 
@@ -262,7 +265,8 @@ class CharacterApp(customtkinter.CTk):
 
     def _display_image(self, char, target_img):
         if char:
-            img_path=os.path.join(os.getcwd(), "temp", f"{char.name} - {char.S_ID}.png")
+            char_name=re.sub(r'[\\/*?:"<>|\r\n]+', '_', char.name).strip()
+            img_path=os.path.join(os.getcwd(), "temp", f"{char_name} - {char.S_ID}.png")
             try:
                 pil_img=PILImage.open(img_path)
             except FileNotFoundError:
@@ -399,11 +403,14 @@ class CharacterApp(customtkinter.CTk):
             self._create_alias()
 
         with flask_app.app_context():
-            query=text("CALL reassign_by_c_id(:old, :new)")
-            db.session.execute(query, {
-                "old": self.second_ch.C_ID,
-                "new": self.first_ch.C_ID
-            })
+            try:
+                query=text("CALL reassign_by_c_id(:old, :new)")
+                db.session.execute(query, {
+                    "old": self.second_ch.C_ID,
+                    "new": self.first_ch.C_ID
+                })
+            except IntegrityError:
+                db.session.rollback()
             db.session.commit()
         self.second_ch=None
         self._clear_ch2()

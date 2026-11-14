@@ -13,8 +13,8 @@ ua=UserAgent()
 headers = {'User-Agent': ua.random}
 offers=[]
 
-from app.schemas.schemas import ScrapedOffer
-from app.models import StatusEnum, StoreEnum, db, Character, Series, Offer, Figure
+from schemas.schemas import ScrapedOffer
+from models.models import StatusEnum, StoreEnum, db, Character, Series, Offer, Figure
 
 def deactivate_offers():
     offers=db.session.query(Offer.link).where(Offer.store==StoreEnum.YATTA, Offer.status!=StatusEnum.ARCHIVAL).all()
