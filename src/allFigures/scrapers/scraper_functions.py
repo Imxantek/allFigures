@@ -183,7 +183,10 @@ def save_to_mysql(data: ScrapedOffer):
                             link=offer_link,
                             store=data.store,
                             price=data.price,
-                            status=data.status)
+                            status=data.status,
+                            title=data.title,
+                            description=data.description,
+                        )
             db.session.add(offer)
             db.session.flush()
             process_offer_images(offer.O_ID, data.imgs)
@@ -294,7 +297,9 @@ def save_to_mysql(data: ScrapedOffer):
                             link=offer_link,
                             store=data.store,
                             price=data.price,
-                            status=data.status
+                            status=data.status,
+                            title=data.title,
+                            description=data.description,
                         )
                         db.session.add(offer)
                         db.session.flush()
@@ -333,7 +338,9 @@ def save_to_mysql(data: ScrapedOffer):
                     link=offer_link,
                     store=data.store,
                     price=data.price,
-                    status=data.status)
+                    status=data.status,
+                    title=data.title,
+                    description=data.description)
     db.session.add(new_offer)
     db.session.flush()
 
@@ -467,7 +474,8 @@ def get_name_from_cache(fig_name: str, series_title:str =""):
                 matched_char, known_series=matched_data
 
                 if series_lower and series_lower != "original character / unknown":
-                    if series_lower not in known_series and "original character / unknown" not in known_series:
+                    known_series_lower = {s.lower() for s in known_series}
+                    if series_lower not in known_series_lower and "original character / unknown" not in known_series:
                         # the series didnt match, so we keep on checking
                         continue
 
@@ -484,7 +492,7 @@ def get_name_from_cache(fig_name: str, series_title:str =""):
 
 
 def save_failures_to_csv(failed_offer: dict):
-    filename = f"rejects-{datetime.datetime.now().strftime('%Y%m%d-%H%M%S')}.csv"
+    filename = f"rejects/rejects-{datetime.datetime.now().strftime('%Y%m%d-%H%M%S')}.csv"
     with open(filename, 'a', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         writer.writerow(failed_offer.values())

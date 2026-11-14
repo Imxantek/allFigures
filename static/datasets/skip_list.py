@@ -27,7 +27,7 @@ KW_SKIP={
          "MDLX", "Lane", "Ichibansho", "GT", "Legends", "Artcanvas", "Daima", "Evangelion", "Cutie1", "Wano", "Refresh", "ZERO", "HLB", "Baseball", "AAA", "Anime"
 }
 SKIPPED_SERIES={
-   "superbohaterowie", "animacje", "anime / manga", "fantasy", "film / tv - pozostałe"
+   "superbohaterowie", "animacje", "anime / manga", "fantasy", "film / tv - pozostałe",
    "geek", "gry - pozostałe", "horror", "kaijū", "komiksy - pozostałe", "mecha", "muzyka", "sport"
 }
 
